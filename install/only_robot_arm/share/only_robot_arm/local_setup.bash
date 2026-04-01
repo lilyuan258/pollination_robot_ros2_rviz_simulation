@@ -1,0 +1,1 @@
+/home/lcy/ros2_ws/build/only_robot_arm/ament_cmake_environment_hooks/local_setup.bash

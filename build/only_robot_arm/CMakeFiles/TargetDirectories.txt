@@ -1,0 +1,9 @@
+/home/lcy/ros2_ws/build/only_robot_arm/CMakeFiles/uninstall.dir
+/home/lcy/ros2_ws/build/only_robot_arm/CMakeFiles/only_robot_arm_uninstall.dir
+/home/lcy/ros2_ws/build/only_robot_arm/CMakeFiles/test.dir
+/home/lcy/ros2_ws/build/only_robot_arm/CMakeFiles/edit_cache.dir
+/home/lcy/ros2_ws/build/only_robot_arm/CMakeFiles/rebuild_cache.dir
+/home/lcy/ros2_ws/build/only_robot_arm/CMakeFiles/list_install_components.dir
+/home/lcy/ros2_ws/build/only_robot_arm/CMakeFiles/install.dir
+/home/lcy/ros2_ws/build/only_robot_arm/CMakeFiles/install/local.dir
+/home/lcy/ros2_ws/build/only_robot_arm/CMakeFiles/install/strip.dir

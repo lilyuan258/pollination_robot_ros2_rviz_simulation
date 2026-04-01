@@ -1,0 +1,50 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done (0.6s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/lcy/ros2_ws/build/only_robot_arm
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/launch/display.launch
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/launch/display_jazzy.launch.py
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/launch/gazebo.launch
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/urdf/only_robot_arm.csv
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/urdf/only_robot_arm.urdf
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/base_link.STL
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/camera_link.STL
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_1.STL
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_2.STL
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_3.STL
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_4.STL
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_5.STL
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_6.STL
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/pollination_tip_link.STL
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/config/joint_names_only_robot_arm.yaml
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/ament_index/resource_index/package_run_dependencies/only_robot_arm
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/ament_index/resource_index/parent_prefix_path/only_robot_arm
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/environment/ament_prefix_path.sh
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/environment/ament_prefix_path.dsv
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/environment/path.sh
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/environment/path.dsv
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/local_setup.bash
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/local_setup.sh
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/local_setup.zsh
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/local_setup.dsv
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/package.dsv
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/ament_index/resource_index/packages/only_robot_arm
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/cmake/only_robot_armConfig.cmake
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/cmake/only_robot_armConfig-version.cmake
+-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/package.xml

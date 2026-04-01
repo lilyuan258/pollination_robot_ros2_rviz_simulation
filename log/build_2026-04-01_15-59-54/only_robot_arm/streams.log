@@ -1,0 +1,42 @@
+[0.008s] Invoking command in '/home/lcy/ros2_ws/build/only_robot_arm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/lcy/ros2_ws/build/only_robot_arm -- -j16 -l16
+[0.029s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.199s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.276s] -- Configuring done (0.2s)
+[0.278s] -- Generating done (0.0s)
+[0.279s] -- Build files have been written to: /home/lcy/ros2_ws/build/only_robot_arm
+[0.301s] Invoked command in '/home/lcy/ros2_ws/build/only_robot_arm' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/lcy/ros2_ws/build/only_robot_arm -- -j16 -l16
+[0.311s] Invoking command in '/home/lcy/ros2_ws/build/only_robot_arm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/lcy/ros2_ws/build/only_robot_arm
+[0.318s] -- Install configuration: ""
+[0.318s] -- Execute custom install script
+[0.319s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/launch/display.launch
+[0.319s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/launch/display_jazzy.launch.py
+[0.319s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/launch/gazebo.launch
+[0.319s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/urdf/only_robot_arm.csv
+[0.319s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/urdf/only_robot_arm.urdf
+[0.319s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/base_link.STL
+[0.319s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/camera_link.STL
+[0.319s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_1.STL
+[0.320s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_2.STL
+[0.320s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_3.STL
+[0.320s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_4.STL
+[0.320s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_5.STL
+[0.320s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_6.STL
+[0.320s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/pollination_tip_link.STL
+[0.320s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/config/joint_names_only_robot_arm.yaml
+[0.320s] -- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/lib/only_robot_arm/watermelon_flower_marker.py
+[0.329s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/ament_index/resource_index/package_run_dependencies/only_robot_arm
+[0.329s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/ament_index/resource_index/parent_prefix_path/only_robot_arm
+[0.330s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/environment/ament_prefix_path.sh
+[0.330s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/environment/ament_prefix_path.dsv
+[0.330s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/environment/path.sh
+[0.330s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/environment/path.dsv
+[0.330s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/local_setup.bash
+[0.330s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/local_setup.sh
+[0.330s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/local_setup.zsh
+[0.330s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/local_setup.dsv
+[0.330s] -- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/package.dsv
+[0.339s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/ament_index/resource_index/packages/only_robot_arm
+[0.339s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/cmake/only_robot_armConfig.cmake
+[0.339s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/cmake/only_robot_armConfig-version.cmake
+[0.340s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/package.xml
+[0.342s] Invoked command in '/home/lcy/ros2_ws/build/only_robot_arm' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/lcy/ros2_ws/build/only_robot_arm

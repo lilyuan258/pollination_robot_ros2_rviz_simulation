@@ -1,0 +1,1 @@
+/home/lcy/ros2_ws/src/only_robot_arm/launch/display_jazzy.launch.py
