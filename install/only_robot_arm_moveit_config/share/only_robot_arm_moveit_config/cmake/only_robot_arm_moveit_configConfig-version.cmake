@@ -1,1 +1,0 @@
-/home/lcy/ros2_ws/build/only_robot_arm_moveit_config/ament_cmake_core/only_robot_arm_moveit_configConfig-version.cmake
