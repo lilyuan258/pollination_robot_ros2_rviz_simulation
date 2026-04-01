@@ -1,0 +1,87 @@
+[0.009s] Invoking command in '/home/lcy/ros2_ws/build/only_robot_arm_pollination': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/lcy/ros2_ws/src/only_robot_arm_pollination -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/lcy/ros2_ws/install/only_robot_arm_pollination
+[0.023s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.229s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.242s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[0.266s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.274s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.284s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.296s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.335s] -- Found moveit_core: 2.12.4 (/opt/ros/jazzy/share/moveit_core/cmake)
+[0.350s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[0.387s] -- Found parameter_traits: 0.6.0 (/opt/ros/jazzy/share/parameter_traits/cmake)
+[0.439s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.441s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.509s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.575s] -- Found rclcpp_lifecycle: 28.1.16 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+[0.604s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: filesystem 
+[0.685s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.956s] -- Found moveit_ros_planning_interface: 2.12.4 (/opt/ros/jazzy/share/moveit_ros_planning_interface/cmake)
+[0.961s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: date_time filesystem program_options system thread 
+[0.972s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono 
+[1.014s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread system filesystem regex date_time program_options 
+[1.036s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread 
+[1.162s] -- Configuring done (1.1s)
+[1.195s] -- Generating done (0.0s)
+[1.201s] -- Build files have been written to: /home/lcy/ros2_ws/build/only_robot_arm_pollination
+[1.218s] Invoked command in '/home/lcy/ros2_ws/build/only_robot_arm_pollination' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/lcy/ros2_ws/src/only_robot_arm_pollination -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/lcy/ros2_ws/install/only_robot_arm_pollination
+[1.219s] Invoking command in '/home/lcy/ros2_ws/build/only_robot_arm_pollination': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/lcy/ros2_ws/build/only_robot_arm_pollination -- -j16 -l16
+[1.301s] [ 50%] Building CXX object CMakeFiles/pollination_cycle_node.dir/src/pollination_cycle_node.cpp.o
+[5.635s] In file included from /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:19:
+[5.635s] /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77: note: ‘#pragma message: .h header is obsolete. Please use the .hpp header instead.’
+[5.635s]    50 | #pragma message(".h header is obsolete. Please use the .hpp header instead.")
+[5.635s]       |                                                                             ^
+[5.952s] /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp: In member function ‘PollinationCycleNode::ApproachTargets PollinationCycleNode::selectApproachTargets(const geometry_msgs::msg::Point&, const geometry_msgs::msg::Point&)’:
+[5.953s] /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:438:15: warning: converting to ‘geometry_msgs::msg::Pose’ {aka ‘geometry_msgs::msg::Pose_<std::allocator<void> >’} from initializer list would use explicit constructor ‘geometry_msgs::msg::Pose_<ContainerAllocator>::Pose_(rosidl_runtime_cpp::MessageInitialization) [with ContainerAllocator = std::allocator<void>]’
+[5.953s]   438 |       return {};
+[5.953s]       |               ^
+[5.953s] /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:438:15: note: in C++11 and above a default constructor can be explicit
+[5.953s] /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:438:15: warning: converting to ‘geometry_msgs::msg::Pose’ {aka ‘geometry_msgs::msg::Pose_<std::allocator<void> >’} from initializer list would use explicit constructor ‘geometry_msgs::msg::Pose_<ContainerAllocator>::Pose_(rosidl_runtime_cpp::MessageInitialization) [with ContainerAllocator = std::allocator<void>]’
+[5.953s] /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:438:15: note: in C++11 and above a default constructor can be explicit
+[5.953s] /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:446:15: warning: converting to ‘geometry_msgs::msg::Pose’ {aka ‘geometry_msgs::msg::Pose_<std::allocator<void> >’} from initializer list would use explicit constructor ‘geometry_msgs::msg::Pose_<ContainerAllocator>::Pose_(rosidl_runtime_cpp::MessageInitialization) [with ContainerAllocator = std::allocator<void>]’
+[5.953s]   446 |       return {};
+[5.953s]       |               ^
+[5.953s] /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:446:15: note: in C++11 and above a default constructor can be explicit
+[5.953s] /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:446:15: warning: converting to ‘geometry_msgs::msg::Pose’ {aka ‘geometry_msgs::msg::Pose_<std::allocator<void> >’} from initializer list would use explicit constructor ‘geometry_msgs::msg::Pose_<ContainerAllocator>::Pose_(rosidl_runtime_cpp::MessageInitialization) [with ContainerAllocator = std::allocator<void>]’
+[5.953s] /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:446:15: note: in C++11 and above a default constructor can be explicit
+[5.982s] /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp: In member function ‘bool PollinationCycleNode::executeCartesianSegment(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >&, const std::string&)’:
+[5.982s] /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:731:62: warning: ‘double moveit::planning_interface::MoveGroupInterface::computeCartesianPath(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >&, double, double, moveit_msgs::msg::RobotTrajectory&, bool, moveit_msgs::msg::MoveItErrorCodes*)’ is deprecated: Drop jump_threshold [-Wdeprecated-declarations]
+[5.982s]   731 |     const double fraction = move_group_->computeCartesianPath(
+[5.982s]       |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[5.982s]   732 |       waypoints,
+[5.982s]       |       ~~~~~~~~~~                                              
+[5.983s]   733 |       cartesian_step_m_,
+[5.983s]       |       ~~~~~~~~~~~~~~~~~~                                      
+[5.983s]   734 |       cartesian_jump_threshold_,
+[5.983s]       |       ~~~~~~~~~~~~~~~~~~~~~~~~~~                              
+[5.983s]   735 |       trajectory,
+[5.983s]       |       ~~~~~~~~~~~                                             
+[5.983s]   736 |       true);
+[5.983s]       |       ~~~~~                                                   
+[5.983s] In file included from /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:18:
+[5.983s] /opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:765:3: note: declared here
+[5.983s]   765 |   computeCartesianPath(const std::vector<geometry_msgs::msg::Pose>& waypoints, double eef_step,
+[5.983s]       |   ^~~~~~~~~~~~~~~~~~~~
+[16.055s] [100%] Linking CXX executable pollination_cycle_node
+[16.956s] [100%] Built target pollination_cycle_node
+[16.968s] Invoked command in '/home/lcy/ros2_ws/build/only_robot_arm_pollination' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/lcy/ros2_ws/build/only_robot_arm_pollination -- -j16 -l16
+[16.979s] Invoking command in '/home/lcy/ros2_ws/build/only_robot_arm_pollination': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/lcy/ros2_ws/build/only_robot_arm_pollination
+[16.988s] -- Install configuration: ""
+[16.989s] -- Execute custom install script
+[16.989s] -- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm_pollination/lib/only_robot_arm_pollination/pollination_cycle_node
+[17.001s] -- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/config/pollination.yaml
+[17.011s] -- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/ament_index/resource_index/package_run_dependencies/only_robot_arm_pollination
+[17.022s] -- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/ament_index/resource_index/parent_prefix_path/only_robot_arm_pollination
+[17.031s] -- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/environment/ament_prefix_path.sh
+[17.042s] -- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/environment/ament_prefix_path.dsv
+[17.052s] -- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/environment/path.sh
+[17.063s] -- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/environment/path.dsv
+[17.073s] -- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/local_setup.bash
+[17.083s] -- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/local_setup.sh
+[17.092s] -- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/local_setup.zsh
+[17.102s] -- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/local_setup.dsv
+[17.113s] -- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/package.dsv
+[17.123s] -- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/ament_index/resource_index/packages/only_robot_arm_pollination
+[17.133s] -- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/cmake/only_robot_arm_pollinationConfig.cmake
+[17.143s] -- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/cmake/only_robot_arm_pollinationConfig-version.cmake
+[17.156s] -- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/package.xml
+[17.171s] Invoked command in '/home/lcy/ros2_ws/build/only_robot_arm_pollination' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/lcy/ros2_ws/build/only_robot_arm_pollination

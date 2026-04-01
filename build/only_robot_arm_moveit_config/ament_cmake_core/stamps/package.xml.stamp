@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>only_robot_arm_moveit_config</name>
+  <version>0.0.0</version>
+  <description>MoveIt configuration and launch files for the inverted only_robot_arm pollination simulation.</description>
+
+  <maintainer email="lcy@todo.todo">lcy</maintainer>
+  <license>TODO</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <exec_depend>moveit_core</exec_depend>
+  <exec_depend>moveit_kinematics</exec_depend>
+  <exec_depend>moveit_msgs</exec_depend>
+  <exec_depend>moveit_planners_ompl</exec_depend>
+  <exec_depend>moveit_ros_move_group</exec_depend>
+  <exec_depend>moveit_ros_visualization</exec_depend>
+  <exec_depend>only_robot_arm</exec_depend>
+  <exec_depend>only_robot_arm_pollination</exec_depend>
+  <exec_depend>python3-yaml</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

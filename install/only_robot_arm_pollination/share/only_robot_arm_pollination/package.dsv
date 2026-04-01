@@ -1,0 +1,8 @@
+source;share/only_robot_arm_pollination/hook/cmake_prefix_path.ps1
+source;share/only_robot_arm_pollination/hook/cmake_prefix_path.dsv
+source;share/only_robot_arm_pollination/hook/cmake_prefix_path.sh
+source;share/only_robot_arm_pollination/local_setup.bash
+source;share/only_robot_arm_pollination/local_setup.dsv
+source;share/only_robot_arm_pollination/local_setup.ps1
+source;share/only_robot_arm_pollination/local_setup.sh
+source;share/only_robot_arm_pollination/local_setup.zsh

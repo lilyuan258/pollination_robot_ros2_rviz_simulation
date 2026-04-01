@@ -1,0 +1,10 @@
+planner_configs:
+  RRTConnectkConfigDefault:
+    type: geometric::RRTConnect
+    range: 0.0
+
+arm:
+  planner_configs:
+    - RRTConnectkConfigDefault
+  projection_evaluator: joints(joint_1,joinit_2)
+  longest_valid_segment_fraction: 0.005

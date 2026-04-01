@@ -1,0 +1,4 @@
+source;share/only_robot_arm_pollination/local_setup.bash
+source;share/only_robot_arm_pollination/local_setup.dsv
+source;share/only_robot_arm_pollination/local_setup.sh
+source;share/only_robot_arm_pollination/local_setup.zsh

@@ -1,0 +1,25 @@
+/home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp: In member function ‘bool PollinationCycleNode::executeCartesianSegment(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >&, const std::string&)’:
+/home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:347:62: warning: ‘double moveit::planning_interface::MoveGroupInterface::computeCartesianPath(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >&, double, double, moveit_msgs::msg::RobotTrajectory&, bool, moveit_msgs::msg::MoveItErrorCodes*)’ is deprecated: Drop jump_threshold [-Wdeprecated-declarations]
+  347 |     const double fraction = move_group_->computeCartesianPath(
+      |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+  348 |       waypoints,
+      |       ~~~~~~~~~~                                              
+  349 |       cartesian_step_m_,
+      |       ~~~~~~~~~~~~~~~~~~                                      
+  350 |       cartesian_jump_threshold_,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~                              
+  351 |       trajectory,
+      |       ~~~~~~~~~~~                                             
+  352 |       true);
+      |       ~~~~~                                                   
+In file included from /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:15:
+/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:765:3: note: declared here
+  765 |   computeCartesianPath(const std::vector<geometry_msgs::msg::Pose>& waypoints, double eef_step,
+      |   ^~~~~~~~~~~~~~~~~~~~
+/home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:366:10: error: ‘struct moveit::planning_interface::MoveGroupInterface::Plan’ has no member named ‘trajectory_’; did you mean ‘trajectory’?
+  366 |     plan.trajectory_ = trajectory;
+      |          ^~~~~~~~~~~
+      |          trajectory
+gmake[2]: *** [CMakeFiles/pollination_cycle_node.dir/build.make:76: CMakeFiles/pollination_cycle_node.dir/src/pollination_cycle_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pollination_cycle_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

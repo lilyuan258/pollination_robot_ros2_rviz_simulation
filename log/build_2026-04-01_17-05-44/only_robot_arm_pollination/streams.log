@@ -1,0 +1,69 @@
+[0.008s] Invoking command in '/home/lcy/ros2_ws/build/only_robot_arm_pollination': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/lcy/ros2_ws/src/only_robot_arm_pollination -DCMAKE_INSTALL_PREFIX=/home/lcy/ros2_ws/install/only_robot_arm_pollination
+[0.060s] -- The C compiler identification is GNU 13.3.0
+[0.121s] -- The CXX compiler identification is GNU 13.3.0
+[0.138s] -- Detecting C compiler ABI info
+[0.228s] -- Detecting C compiler ABI info - done
+[0.235s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.235s] -- Detecting C compile features
+[0.236s] -- Detecting C compile features - done
+[0.245s] -- Detecting CXX compiler ABI info
+[0.342s] -- Detecting CXX compiler ABI info - done
+[0.350s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.350s] -- Detecting CXX compile features
+[0.350s] -- Detecting CXX compile features - done
+[0.353s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.487s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.592s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[0.631s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.643s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.658s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.674s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.715s] -- Found moveit_core: 2.12.4 (/opt/ros/jazzy/share/moveit_core/cmake)
+[0.851s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[0.912s] -- Found parameter_traits: 0.6.0 (/opt/ros/jazzy/share/parameter_traits/cmake)
+[0.973s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.976s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.062s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.080s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.110s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.186s] -- Found rclcpp_lifecycle: 28.1.16 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+[1.219s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: filesystem 
+[1.319s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.319s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.618s] -- Found moveit_ros_planning_interface: 2.12.4 (/opt/ros/jazzy/share/moveit_ros_planning_interface/cmake)
+[1.623s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: date_time filesystem program_options system thread 
+[1.635s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono 
+[1.681s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread system filesystem regex date_time program_options 
+[1.706s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread 
+[1.824s] -- Configuring done (1.8s)
+[1.860s] -- Generating done (0.0s)
+[1.866s] -- Build files have been written to: /home/lcy/ros2_ws/build/only_robot_arm_pollination
+[1.887s] Invoked command in '/home/lcy/ros2_ws/build/only_robot_arm_pollination' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/lcy/ros2_ws/src/only_robot_arm_pollination -DCMAKE_INSTALL_PREFIX=/home/lcy/ros2_ws/install/only_robot_arm_pollination
+[1.888s] Invoking command in '/home/lcy/ros2_ws/build/only_robot_arm_pollination': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/lcy/ros2_ws/build/only_robot_arm_pollination -- -j16 -l16
+[1.951s] [ 50%] Building CXX object CMakeFiles/pollination_cycle_node.dir/src/pollination_cycle_node.cpp.o
+[6.196s] /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp: In member function ‘bool PollinationCycleNode::executeCartesianSegment(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >&, const std::string&)’:
+[6.196s] /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:347:62: warning: ‘double moveit::planning_interface::MoveGroupInterface::computeCartesianPath(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >&, double, double, moveit_msgs::msg::RobotTrajectory&, bool, moveit_msgs::msg::MoveItErrorCodes*)’ is deprecated: Drop jump_threshold [-Wdeprecated-declarations]
+[6.197s]   347 |     const double fraction = move_group_->computeCartesianPath(
+[6.197s]       |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[6.197s]   348 |       waypoints,
+[6.197s]       |       ~~~~~~~~~~                                              
+[6.197s]   349 |       cartesian_step_m_,
+[6.197s]       |       ~~~~~~~~~~~~~~~~~~                                      
+[6.197s]   350 |       cartesian_jump_threshold_,
+[6.197s]       |       ~~~~~~~~~~~~~~~~~~~~~~~~~~                              
+[6.197s]   351 |       trajectory,
+[6.197s]       |       ~~~~~~~~~~~                                             
+[6.197s]   352 |       true);
+[6.197s]       |       ~~~~~                                                   
+[6.198s] In file included from /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:15:
+[6.198s] /opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:765:3: note: declared here
+[6.198s]   765 |   computeCartesianPath(const std::vector<geometry_msgs::msg::Pose>& waypoints, double eef_step,
+[6.198s]       |   ^~~~~~~~~~~~~~~~~~~~
+[6.198s] /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:366:10: error: ‘struct moveit::planning_interface::MoveGroupInterface::Plan’ has no member named ‘trajectory_’; did you mean ‘trajectory’?
+[6.198s]   366 |     plan.trajectory_ = trajectory;
+[6.198s]       |          ^~~~~~~~~~~
+[6.198s]       |          trajectory
+[9.796s] gmake[2]: *** [CMakeFiles/pollination_cycle_node.dir/build.make:76: CMakeFiles/pollination_cycle_node.dir/src/pollination_cycle_node.cpp.o] Error 1
+[9.797s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pollination_cycle_node.dir/all] Error 2
+[9.797s] gmake: *** [Makefile:146: all] Error 2
+[9.799s] Invoked command in '/home/lcy/ros2_ws/build/only_robot_arm_pollination' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/lcy/ros2_ws/build/only_robot_arm_pollination -- -j16 -l16

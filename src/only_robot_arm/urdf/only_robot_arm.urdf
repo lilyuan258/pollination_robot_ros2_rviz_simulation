@@ -446,6 +446,21 @@
       xyz="0 0 0" />
   </joint>
   <link
+    name="pollination_tip_tcp" />
+  <joint
+    name="pollination_tip_tcp_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 -0.033433"
+      rpy="0 0 0" />
+    <parent
+      link="pollination_tip_link" />
+    <child
+      link="pollination_tip_tcp" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
     name="camera_link">
     <inertial>
       <origin
@@ -498,4 +513,51 @@
     <axis
       xyz="0 0 0" />
   </joint>
+  <ros2_control name="OnlyRobotArmSystem" type="system">
+    <hardware>
+      <plugin>mock_components/GenericSystem</plugin>
+    </hardware>
+    <joint name="joint_1">
+      <command_interface name="position" />
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity" />
+    </joint>
+    <joint name="joinit_2">
+      <command_interface name="position" />
+      <state_interface name="position">
+        <param name="initial_value">2.087</param>
+      </state_interface>
+      <state_interface name="velocity" />
+    </joint>
+    <joint name="joint_3">
+      <command_interface name="position" />
+      <state_interface name="position">
+        <param name="initial_value">-2.495</param>
+      </state_interface>
+      <state_interface name="velocity" />
+    </joint>
+    <joint name="joint_4">
+      <command_interface name="position" />
+      <state_interface name="position">
+        <param name="initial_value">0.085</param>
+      </state_interface>
+      <state_interface name="velocity" />
+    </joint>
+    <joint name="joint_5">
+      <command_interface name="position" />
+      <state_interface name="position">
+        <param name="initial_value">0.458</param>
+      </state_interface>
+      <state_interface name="velocity" />
+    </joint>
+    <joint name="joint_6">
+      <command_interface name="position" />
+      <state_interface name="position">
+        <param name="initial_value">0.017</param>
+      </state_interface>
+      <state_interface name="velocity" />
+    </joint>
+  </ros2_control>
 </robot>

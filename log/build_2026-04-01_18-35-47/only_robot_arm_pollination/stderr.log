@@ -1,0 +1,31 @@
+/home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp: In member function ‘PollinationCycleNode::ApproachTargets PollinationCycleNode::selectApproachTargets(const geometry_msgs::msg::Point&, const geometry_msgs::msg::Point&)’:
+/home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:476:30: warning: converting to ‘geometry_msgs::msg::Pose’ {aka ‘geometry_msgs::msg::Pose_<std::allocator<void> >’} from initializer list would use explicit constructor ‘geometry_msgs::msg::Pose_<ContainerAllocator>::Pose_(rosidl_runtime_cpp::MessageInitialization) [with ContainerAllocator = std::allocator<void>]’
+  476 |       return ApproachTargets{};
+      |                              ^
+/home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:476:30: note: in C++11 and above a default constructor can be explicit
+/home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:476:30: warning: converting to ‘geometry_msgs::msg::Pose’ {aka ‘geometry_msgs::msg::Pose_<std::allocator<void> >’} from initializer list would use explicit constructor ‘geometry_msgs::msg::Pose_<ContainerAllocator>::Pose_(rosidl_runtime_cpp::MessageInitialization) [with ContainerAllocator = std::allocator<void>]’
+/home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:476:30: note: in C++11 and above a default constructor can be explicit
+/home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:484:30: warning: converting to ‘geometry_msgs::msg::Pose’ {aka ‘geometry_msgs::msg::Pose_<std::allocator<void> >’} from initializer list would use explicit constructor ‘geometry_msgs::msg::Pose_<ContainerAllocator>::Pose_(rosidl_runtime_cpp::MessageInitialization) [with ContainerAllocator = std::allocator<void>]’
+  484 |       return ApproachTargets{};
+      |                              ^
+/home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:484:30: note: in C++11 and above a default constructor can be explicit
+/home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:484:30: warning: converting to ‘geometry_msgs::msg::Pose’ {aka ‘geometry_msgs::msg::Pose_<std::allocator<void> >’} from initializer list would use explicit constructor ‘geometry_msgs::msg::Pose_<ContainerAllocator>::Pose_(rosidl_runtime_cpp::MessageInitialization) [with ContainerAllocator = std::allocator<void>]’
+/home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:484:30: note: in C++11 and above a default constructor can be explicit
+/home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp: In member function ‘bool PollinationCycleNode::executeCartesianSegment(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >&, const std::string&)’:
+/home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:844:62: warning: ‘double moveit::planning_interface::MoveGroupInterface::computeCartesianPath(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >&, double, double, moveit_msgs::msg::RobotTrajectory&, bool, moveit_msgs::msg::MoveItErrorCodes*)’ is deprecated: Drop jump_threshold [-Wdeprecated-declarations]
+  844 |     const double fraction = move_group_->computeCartesianPath(
+      |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+  845 |       waypoints,
+      |       ~~~~~~~~~~                                              
+  846 |       cartesian_step_m_,
+      |       ~~~~~~~~~~~~~~~~~~                                      
+  847 |       cartesian_jump_threshold_,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~                              
+  848 |       trajectory,
+      |       ~~~~~~~~~~~                                             
+  849 |       true);
+      |       ~~~~~                                                   
+In file included from /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:18:
+/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:765:3: note: declared here
+  765 |   computeCartesianPath(const std::vector<geometry_msgs::msg::Pose>& waypoints, double eef_step,
+      |   ^~~~~~~~~~~~~~~~~~~~

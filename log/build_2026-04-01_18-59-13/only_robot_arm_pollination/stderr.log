@@ -1,0 +1,18 @@
+/home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp: In member function ‘bool PollinationCycleNode::executeCartesianSegment(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >&, const std::string&)’:
+/home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:1040:62: warning: ‘double moveit::planning_interface::MoveGroupInterface::computeCartesianPath(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >&, double, double, moveit_msgs::msg::RobotTrajectory&, bool, moveit_msgs::msg::MoveItErrorCodes*)’ is deprecated: Drop jump_threshold [-Wdeprecated-declarations]
+ 1040 |     const double fraction = move_group_->computeCartesianPath(
+      |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+ 1041 |       waypoints,
+      |       ~~~~~~~~~~                                              
+ 1042 |       cartesian_step_m_,
+      |       ~~~~~~~~~~~~~~~~~~                                      
+ 1043 |       cartesian_jump_threshold_,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~                              
+ 1044 |       trajectory,
+      |       ~~~~~~~~~~~                                             
+ 1045 |       true);
+      |       ~~~~~                                                   
+In file included from /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:18:
+/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:765:3: note: declared here
+  765 |   computeCartesianPath(const std::vector<geometry_msgs::msg::Pose>& waypoints, double eef_step,
+      |   ^~~~~~~~~~~~~~~~~~~~

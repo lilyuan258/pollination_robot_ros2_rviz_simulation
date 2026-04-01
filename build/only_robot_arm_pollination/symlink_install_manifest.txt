@@ -1,0 +1,17 @@
+/home/lcy/ros2_ws/install/only_robot_arm_pollination/lib/only_robot_arm_pollination/pollination_cycle_node
+/home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/config/pollination.yaml
+/home/lcy/ros2_ws/install/only_robot_arm_pollination/share/ament_index/resource_index/package_run_dependencies/only_robot_arm_pollination
+/home/lcy/ros2_ws/install/only_robot_arm_pollination/share/ament_index/resource_index/parent_prefix_path/only_robot_arm_pollination
+/home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/environment/ament_prefix_path.sh
+/home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/environment/ament_prefix_path.dsv
+/home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/environment/path.sh
+/home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/environment/path.dsv
+/home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/local_setup.bash
+/home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/local_setup.sh
+/home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/local_setup.zsh
+/home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/local_setup.dsv
+/home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/package.dsv
+/home/lcy/ros2_ws/install/only_robot_arm_pollination/share/ament_index/resource_index/packages/only_robot_arm_pollination
+/home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/cmake/only_robot_arm_pollinationConfig.cmake
+/home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/cmake/only_robot_arm_pollinationConfig-version.cmake
+/home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/package.xml

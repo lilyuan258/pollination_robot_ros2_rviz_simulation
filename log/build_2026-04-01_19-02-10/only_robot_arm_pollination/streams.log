@@ -1,0 +1,44 @@
+[0.009s] Invoking command in '/home/lcy/ros2_ws/build/only_robot_arm_pollination': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/lcy/ros2_ws/build/only_robot_arm_pollination -- -j16 -l16
+[0.095s] [ 50%] Building CXX object CMakeFiles/pollination_cycle_node.dir/src/pollination_cycle_node.cpp.o
+[4.844s] /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp: In member function ‘bool PollinationCycleNode::executeCartesianSegment(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >&, const std::string&)’:
+[4.844s] /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:1090:62: warning: ‘double moveit::planning_interface::MoveGroupInterface::computeCartesianPath(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >&, double, double, moveit_msgs::msg::RobotTrajectory&, bool, moveit_msgs::msg::MoveItErrorCodes*)’ is deprecated: Drop jump_threshold [-Wdeprecated-declarations]
+[4.844s]  1090 |     const double fraction = move_group_->computeCartesianPath(
+[4.844s]       |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[4.844s]  1091 |       waypoints,
+[4.844s]       |       ~~~~~~~~~~                                              
+[4.844s]  1092 |       cartesian_step_m_,
+[4.844s]       |       ~~~~~~~~~~~~~~~~~~                                      
+[4.844s]  1093 |       cartesian_jump_threshold_,
+[4.844s]       |       ~~~~~~~~~~~~~~~~~~~~~~~~~~                              
+[4.844s]  1094 |       trajectory,
+[4.844s]       |       ~~~~~~~~~~~                                             
+[4.844s]  1095 |       true);
+[4.844s]       |       ~~~~~                                                   
+[4.844s] In file included from /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:18:
+[4.844s] /opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:765:3: note: declared here
+[4.844s]   765 |   computeCartesianPath(const std::vector<geometry_msgs::msg::Pose>& waypoints, double eef_step,
+[4.845s]       |   ^~~~~~~~~~~~~~~~~~~~
+[15.070s] [100%] Linking CXX executable pollination_cycle_node
+[15.972s] [100%] Built target pollination_cycle_node
+[15.984s] Invoked command in '/home/lcy/ros2_ws/build/only_robot_arm_pollination' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/lcy/ros2_ws/build/only_robot_arm_pollination -- -j16 -l16
+[15.994s] Invoking command in '/home/lcy/ros2_ws/build/only_robot_arm_pollination': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/lcy/ros2_ws/build/only_robot_arm_pollination
+[16.001s] -- Install configuration: ""
+[16.001s] -- Execute custom install script
+[16.002s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_pollination/lib/only_robot_arm_pollination/pollination_cycle_node
+[16.002s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/config/pollination.yaml
+[16.002s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/ament_index/resource_index/package_run_dependencies/only_robot_arm_pollination
+[16.002s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/ament_index/resource_index/parent_prefix_path/only_robot_arm_pollination
+[16.002s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/environment/ament_prefix_path.sh
+[16.002s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/environment/ament_prefix_path.dsv
+[16.003s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/environment/path.sh
+[16.003s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/environment/path.dsv
+[16.003s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/local_setup.bash
+[16.003s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/local_setup.sh
+[16.003s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/local_setup.zsh
+[16.003s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/local_setup.dsv
+[16.003s] -- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/package.dsv
+[16.015s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/ament_index/resource_index/packages/only_robot_arm_pollination
+[16.015s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/cmake/only_robot_arm_pollinationConfig.cmake
+[16.015s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/cmake/only_robot_arm_pollinationConfig-version.cmake
+[16.015s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/package.xml
+[16.017s] Invoked command in '/home/lcy/ros2_ws/build/only_robot_arm_pollination' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/lcy/ros2_ws/build/only_robot_arm_pollination

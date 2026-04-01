@@ -1,0 +1,42 @@
+[0.009s] Invoking command in '/home/lcy/ros2_ws/build/only_robot_arm_pollination': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/lcy/ros2_ws/build/only_robot_arm_pollination -- -j16 -l16
+[0.091s] [ 50%] Building CXX object CMakeFiles/pollination_cycle_node.dir/src/pollination_cycle_node.cpp.o
+[4.821s] /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp: In member function ‘bool PollinationCycleNode::executeCartesianSegment(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >&, const std::string&)’:
+[4.821s] /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:972:62: warning: ‘double moveit::planning_interface::MoveGroupInterface::computeCartesianPath(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >&, double, double, moveit_msgs::msg::RobotTrajectory&, bool, moveit_msgs::msg::MoveItErrorCodes*)’ is deprecated: Drop jump_threshold [-Wdeprecated-declarations]
+[4.821s]   972 |     const double fraction = move_group_->computeCartesianPath(
+[4.821s]       |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[4.821s]   973 |       waypoints,
+[4.821s]       |       ~~~~~~~~~~                                              
+[4.821s]   974 |       cartesian_step_m_,
+[4.821s]       |       ~~~~~~~~~~~~~~~~~~                                      
+[4.821s]   975 |       cartesian_jump_threshold_,
+[4.821s]       |       ~~~~~~~~~~~~~~~~~~~~~~~~~~                              
+[4.821s]   976 |       trajectory,
+[4.821s]       |       ~~~~~~~~~~~                                             
+[4.821s]   977 |       true);
+[4.821s]       |       ~~~~~                                                   
+[4.821s] In file included from /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:18:
+[4.821s] /opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:765:3: note: declared here
+[4.821s]   765 |   computeCartesianPath(const std::vector<geometry_msgs::msg::Pose>& waypoints, double eef_step,
+[4.822s]       |   ^~~~~~~~~~~~~~~~~~~~
+[5.112s] In file included from /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:7:
+[5.113s] /usr/include/c++/13/mutex: In instantiation of ‘std::scoped_lock<_Mutex>::scoped_lock(mutex_type&) [with _Mutex = const std::mutex; mutex_type = const std::mutex]’:
+[5.113s] /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:386:47:   required from here
+[5.113s] /usr/include/c++/13/mutex:779:23: error: passing ‘std::scoped_lock<const std::mutex>::mutex_type’ {aka ‘const std::mutex’} as ‘this’ argument discards qualifiers [-fpermissive]
+[5.113s]   779 |       { _M_device.lock(); }
+[5.113s]       |         ~~~~~~~~~~~~~~^~
+[5.113s] In file included from /usr/include/c++/13/mutex:45:
+[5.113s] /usr/include/c++/13/bits/std_mutex.h:111:5: note:   in call to ‘void std::mutex::lock()’
+[5.113s]   111 |     lock()
+[5.113s]       |     ^~~~
+[5.113s] /usr/include/c++/13/mutex: In instantiation of ‘std::scoped_lock<_Mutex>::~scoped_lock() [with _Mutex = const std::mutex]’:
+[5.113s] /home/lcy/ros2_ws/src/only_robot_arm_pollination/src/pollination_cycle_node.cpp:386:47:   required from here
+[5.113s] /usr/include/c++/13/mutex:786:25: error: passing ‘std::scoped_lock<const std::mutex>::mutex_type’ {aka ‘const std::mutex’} as ‘this’ argument discards qualifiers [-fpermissive]
+[5.113s]   786 |       { _M_device.unlock(); }
+[5.114s]       |         ~~~~~~~~~~~~~~~~^~
+[5.114s] /usr/include/c++/13/bits/std_mutex.h:129:5: note:   in call to ‘void std::mutex::unlock()’
+[5.114s]   129 |     unlock()
+[5.114s]       |     ^~~~~~
+[9.832s] gmake[2]: *** [CMakeFiles/pollination_cycle_node.dir/build.make:76: CMakeFiles/pollination_cycle_node.dir/src/pollination_cycle_node.cpp.o] Error 1
+[9.832s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pollination_cycle_node.dir/all] Error 2
+[9.832s] gmake: *** [Makefile:146: all] Error 2
+[9.835s] Invoked command in '/home/lcy/ros2_ws/build/only_robot_arm_pollination' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/lcy/ros2_ws/build/only_robot_arm_pollination -- -j16 -l16

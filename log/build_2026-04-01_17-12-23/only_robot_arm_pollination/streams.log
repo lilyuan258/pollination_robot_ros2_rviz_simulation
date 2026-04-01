@@ -1,0 +1,24 @@
+[0.009s] Invoking command in '/home/lcy/ros2_ws/build/only_robot_arm_pollination': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/lcy/ros2_ws/build/only_robot_arm_pollination -- -j16 -l16
+[0.089s] [100%] Built target pollination_cycle_node
+[0.100s] Invoked command in '/home/lcy/ros2_ws/build/only_robot_arm_pollination' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/lcy/ros2_ws/build/only_robot_arm_pollination -- -j16 -l16
+[0.110s] Invoking command in '/home/lcy/ros2_ws/build/only_robot_arm_pollination': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/lcy/ros2_ws/build/only_robot_arm_pollination
+[0.117s] -- Install configuration: ""
+[0.117s] -- Up-to-date: /home/lcy/ros2_ws/install/only_robot_arm_pollination/lib/only_robot_arm_pollination/pollination_cycle_node
+[0.117s] -- Up-to-date: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/config
+[0.117s] -- Up-to-date: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/config/pollination.yaml
+[0.118s] -- Up-to-date: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/ament_index/resource_index/package_run_dependencies/only_robot_arm_pollination
+[0.118s] -- Up-to-date: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/ament_index/resource_index/parent_prefix_path/only_robot_arm_pollination
+[0.118s] -- Up-to-date: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/environment/ament_prefix_path.sh
+[0.118s] -- Up-to-date: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/environment/ament_prefix_path.dsv
+[0.118s] -- Up-to-date: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/environment/path.sh
+[0.118s] -- Up-to-date: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/environment/path.dsv
+[0.118s] -- Up-to-date: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/local_setup.bash
+[0.118s] -- Up-to-date: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/local_setup.sh
+[0.118s] -- Up-to-date: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/local_setup.zsh
+[0.118s] -- Up-to-date: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/local_setup.dsv
+[0.118s] -- Up-to-date: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/package.dsv
+[0.118s] -- Up-to-date: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/ament_index/resource_index/packages/only_robot_arm_pollination
+[0.118s] -- Up-to-date: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/cmake/only_robot_arm_pollinationConfig.cmake
+[0.118s] -- Up-to-date: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/cmake/only_robot_arm_pollinationConfig-version.cmake
+[0.118s] -- Up-to-date: /home/lcy/ros2_ws/install/only_robot_arm_pollination/share/only_robot_arm_pollination/package.xml
+[0.120s] Invoked command in '/home/lcy/ros2_ws/build/only_robot_arm_pollination' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/lcy/ros2_ws/build/only_robot_arm_pollination
