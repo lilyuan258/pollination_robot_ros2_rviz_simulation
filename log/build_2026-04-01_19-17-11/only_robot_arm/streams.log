@@ -1,0 +1,30 @@
+[0.008s] Invoking command in '/home/lcy/ros2_ws/build/only_robot_arm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/lcy/ros2_ws/build/only_robot_arm -- -j16 -l16
+[0.045s] Invoked command in '/home/lcy/ros2_ws/build/only_robot_arm' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/lcy/ros2_ws/build/only_robot_arm -- -j16 -l16
+[0.054s] Invoking command in '/home/lcy/ros2_ws/build/only_robot_arm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/lcy/ros2_ws/build/only_robot_arm
+[0.061s] -- Install configuration: ""
+[0.061s] -- Execute custom install script
+[0.062s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/launch/display.launch
+[0.062s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/launch/display_jazzy.launch.py
+[0.062s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/launch/gazebo.launch
+[0.062s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/urdf/only_robot_arm.csv
+[0.062s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/urdf/only_robot_arm.urdf
+[0.062s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/base_link.STL
+[0.062s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/camera_link.STL
+[0.062s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_1.STL
+[0.062s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_2.STL
+[0.063s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_3.STL
+[0.063s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_4.STL
+[0.063s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_5.STL
+[0.063s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_6.STL
+[0.063s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/pollination_tip_link.STL
+[0.063s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/config/joint_names_only_robot_arm.yaml
+[0.063s] -- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/config/only_robot_arm.rviz
+[0.063s] [31mCMake Error at ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:105 (message):
+[0.063s]   ament_cmake_symlink_install_directory() can't find
+[0.063s]   '/home/lcy/ros2_ws/src/only_robot_arm/textures'
+[0.063s] Call Stack (most recent call first):
+[0.063s]   ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:319 (ament_cmake_symlink_install_directory)
+[0.063s]   cmake_install.cmake:46 (include)
+[0.064s] 
+[0.064s] [0m
+[0.065s] Invoked command in '/home/lcy/ros2_ws/build/only_robot_arm' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/lcy/ros2_ws/build/only_robot_arm
