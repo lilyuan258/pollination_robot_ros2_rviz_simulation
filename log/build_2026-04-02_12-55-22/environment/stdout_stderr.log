@@ -1,0 +1,44 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Configuring done (0.7s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/lcy/ros2_ws/build/environment
+-- Install configuration: ""
+-- Installing: /home/lcy/ros2_ws/install/environment/share/environment/config
+-- Installing: /home/lcy/ros2_ws/install/environment/share/environment/config/joint_names_environment.yaml
+-- Installing: /home/lcy/ros2_ws/install/environment/share/environment/launch
+-- Installing: /home/lcy/ros2_ws/install/environment/share/environment/launch/gazebo.launch
+-- Installing: /home/lcy/ros2_ws/install/environment/share/environment/launch/display.launch
+-- Installing: /home/lcy/ros2_ws/install/environment/share/environment/meshes
+-- Installing: /home/lcy/ros2_ws/install/environment/share/environment/meshes/environment_link.STL
+-- Installing: /home/lcy/ros2_ws/install/environment/share/environment/textures
+-- Installing: /home/lcy/ros2_ws/install/environment/share/environment/urdf
+-- Installing: /home/lcy/ros2_ws/install/environment/share/environment/urdf/environment.csv
+-- Installing: /home/lcy/ros2_ws/install/environment/share/environment/urdf/environment.urdf
+-- Installing: /home/lcy/ros2_ws/install/environment/share/ament_index/resource_index/package_run_dependencies/environment
+-- Installing: /home/lcy/ros2_ws/install/environment/share/ament_index/resource_index/parent_prefix_path/environment
+-- Installing: /home/lcy/ros2_ws/install/environment/share/environment/environment/ament_prefix_path.sh
+-- Installing: /home/lcy/ros2_ws/install/environment/share/environment/environment/ament_prefix_path.dsv
+-- Installing: /home/lcy/ros2_ws/install/environment/share/environment/environment/path.sh
+-- Installing: /home/lcy/ros2_ws/install/environment/share/environment/environment/path.dsv
+-- Installing: /home/lcy/ros2_ws/install/environment/share/environment/local_setup.bash
+-- Installing: /home/lcy/ros2_ws/install/environment/share/environment/local_setup.sh
+-- Installing: /home/lcy/ros2_ws/install/environment/share/environment/local_setup.zsh
+-- Installing: /home/lcy/ros2_ws/install/environment/share/environment/local_setup.dsv
+-- Installing: /home/lcy/ros2_ws/install/environment/share/environment/package.dsv
+-- Installing: /home/lcy/ros2_ws/install/environment/share/ament_index/resource_index/packages/environment
+-- Installing: /home/lcy/ros2_ws/install/environment/share/environment/cmake/environmentConfig.cmake
+-- Installing: /home/lcy/ros2_ws/install/environment/share/environment/cmake/environmentConfig-version.cmake
+-- Installing: /home/lcy/ros2_ws/install/environment/share/environment/package.xml

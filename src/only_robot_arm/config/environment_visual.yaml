@@ -1,0 +1,30 @@
+environment_visual_marker:
+  ros__parameters:
+    world_frame: base_link
+    publish_rate_hz: 2.0
+    use_embedded_materials: false
+
+    # 仅用于可视化，不参与 MoveIt 碰撞或规划。
+    # 把你从 SW 导出的 mesh 复制到 only_robot_arm/meshes/environment/ 后，
+    # 将下面 mesh_resource 改成对应 package URI。
+
+    rail_enabled: true
+    rail_mesh_resource: "package://environment/meshes/environment_link.STL"
+    rail_xyz: [0.0, 0.0, 0.0]
+    rail_rpy: [3.1415926, 0.0, 1.5707963]
+    rail_scale: [1.0, 1.0, 1.0]
+    rail_rgba: [0.58, 0.58, 0.56, 1.0]
+
+    column_enabled: false
+    column_mesh_resource: ""
+    column_xyz: [0.0, 0.0, 0.0]
+    column_rpy: [0.0, 0.0, 0.0]
+    column_scale: [1.0, 1.0, 1.0]
+    column_rgba: [1.0, 1.0, 1.0, 1.0]
+
+    platform_enabled: false
+    platform_mesh_resource: ""
+    platform_xyz: [0.0, 0.0, 0.0]
+    platform_rpy: [0.0, 0.0, 0.0]
+    platform_scale: [1.0, 1.0, 1.0]
+    platform_rgba: [1.0, 1.0, 1.0, 1.0]

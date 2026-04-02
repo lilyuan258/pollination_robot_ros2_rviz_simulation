@@ -26,6 +26,7 @@ def generate_launch_description():
     moveit_pkg = get_package_share_directory("only_robot_arm_moveit_config")
     urdf_path = os.path.join(arm_pkg, "urdf", "only_robot_arm.urdf")
     rviz_path = os.path.join(moveit_pkg, "launch", "moveit.rviz")
+    env_visual_config = os.path.join(arm_pkg, "config", "environment_visual.yaml")
     initial_positions_path = os.path.join(moveit_pkg, "config", "initial_positions.yaml")
 
     contracted_joint_names = []
@@ -92,6 +93,14 @@ def generate_launch_description():
                 "flower_center_z": LaunchConfiguration("flower_center_z"),
             }
         ],
+    )
+
+    environment_visual_node = Node(
+        package="only_robot_arm",
+        executable="environment_visual_marker.py",
+        name="environment_visual_marker",
+        output="screen",
+        parameters=[env_visual_config],
     )
 
     move_group_node = Node(
@@ -163,6 +172,7 @@ def generate_launch_description():
             static_tf,
             robot_state_publisher,
             marker_node,
+            environment_visual_node,
             move_group_node,
             rviz_node,
             pollination_cycle_node,

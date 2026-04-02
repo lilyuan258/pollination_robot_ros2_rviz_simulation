@@ -34,6 +34,7 @@ install(
 install(
   PROGRAMS
     scripts/watermelon_flower_marker.py
+    scripts/environment_visual_marker.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

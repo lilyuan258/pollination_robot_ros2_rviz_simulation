@@ -1,0 +1,50 @@
+[0.007s] Invoking command in '/home/lcy/ros2_ws/build/environment': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/lcy/ros2_ws/src/environment -DCMAKE_INSTALL_PREFIX=/home/lcy/ros2_ws/install/environment
+[0.093s] -- The C compiler identification is GNU 13.3.0
+[0.168s] -- The CXX compiler identification is GNU 13.3.0
+[0.186s] -- Detecting C compiler ABI info
+[0.275s] -- Detecting C compiler ABI info - done
+[0.282s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.282s] -- Detecting C compile features
+[0.283s] -- Detecting C compile features - done
+[0.292s] -- Detecting CXX compiler ABI info
+[0.385s] -- Detecting CXX compiler ABI info - done
+[0.391s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.392s] -- Detecting CXX compile features
+[0.392s] -- Detecting CXX compile features - done
+[0.397s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.527s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.696s] -- Configuring done (0.7s)
+[0.698s] -- Generating done (0.0s)
+[0.700s] -- Build files have been written to: /home/lcy/ros2_ws/build/environment
+[0.705s] Invoked command in '/home/lcy/ros2_ws/build/environment' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/lcy/ros2_ws/src/environment -DCMAKE_INSTALL_PREFIX=/home/lcy/ros2_ws/install/environment
+[0.706s] Invoking command in '/home/lcy/ros2_ws/build/environment': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/lcy/ros2_ws/build/environment -- -j16 -l16
+[0.745s] Invoked command in '/home/lcy/ros2_ws/build/environment' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/lcy/ros2_ws/build/environment -- -j16 -l16
+[0.755s] Invoking command in '/home/lcy/ros2_ws/build/environment': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/lcy/ros2_ws/build/environment
+[0.762s] -- Install configuration: ""
+[0.762s] -- Installing: /home/lcy/ros2_ws/install/environment/share/environment/config
+[0.763s] -- Installing: /home/lcy/ros2_ws/install/environment/share/environment/config/joint_names_environment.yaml
+[0.763s] -- Installing: /home/lcy/ros2_ws/install/environment/share/environment/launch
+[0.763s] -- Installing: /home/lcy/ros2_ws/install/environment/share/environment/launch/gazebo.launch
+[0.763s] -- Installing: /home/lcy/ros2_ws/install/environment/share/environment/launch/display.launch
+[0.763s] -- Installing: /home/lcy/ros2_ws/install/environment/share/environment/meshes
+[0.763s] -- Installing: /home/lcy/ros2_ws/install/environment/share/environment/meshes/environment_link.STL
+[0.801s] -- Installing: /home/lcy/ros2_ws/install/environment/share/environment/textures
+[0.801s] -- Installing: /home/lcy/ros2_ws/install/environment/share/environment/urdf
+[0.802s] -- Installing: /home/lcy/ros2_ws/install/environment/share/environment/urdf/environment.csv
+[0.802s] -- Installing: /home/lcy/ros2_ws/install/environment/share/environment/urdf/environment.urdf
+[0.802s] -- Installing: /home/lcy/ros2_ws/install/environment/share/ament_index/resource_index/package_run_dependencies/environment
+[0.802s] -- Installing: /home/lcy/ros2_ws/install/environment/share/ament_index/resource_index/parent_prefix_path/environment
+[0.802s] -- Installing: /home/lcy/ros2_ws/install/environment/share/environment/environment/ament_prefix_path.sh
+[0.802s] -- Installing: /home/lcy/ros2_ws/install/environment/share/environment/environment/ament_prefix_path.dsv
+[0.802s] -- Installing: /home/lcy/ros2_ws/install/environment/share/environment/environment/path.sh
+[0.803s] -- Installing: /home/lcy/ros2_ws/install/environment/share/environment/environment/path.dsv
+[0.803s] -- Installing: /home/lcy/ros2_ws/install/environment/share/environment/local_setup.bash
+[0.803s] -- Installing: /home/lcy/ros2_ws/install/environment/share/environment/local_setup.sh
+[0.803s] -- Installing: /home/lcy/ros2_ws/install/environment/share/environment/local_setup.zsh
+[0.803s] -- Installing: /home/lcy/ros2_ws/install/environment/share/environment/local_setup.dsv
+[0.803s] -- Installing: /home/lcy/ros2_ws/install/environment/share/environment/package.dsv
+[0.804s] -- Installing: /home/lcy/ros2_ws/install/environment/share/ament_index/resource_index/packages/environment
+[0.804s] -- Installing: /home/lcy/ros2_ws/install/environment/share/environment/cmake/environmentConfig.cmake
+[0.804s] -- Installing: /home/lcy/ros2_ws/install/environment/share/environment/cmake/environmentConfig-version.cmake
+[0.804s] -- Installing: /home/lcy/ros2_ws/install/environment/share/environment/package.xml
+[0.806s] Invoked command in '/home/lcy/ros2_ws/build/environment' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/lcy/ros2_ws/build/environment

@@ -8,6 +8,7 @@ def generate_launch_description():
     pkg_dir = get_package_share_directory('only_robot_arm')
     urdf_file = os.path.join(pkg_dir, 'urdf', 'only_robot_arm.urdf')
     rviz_config = os.path.join(pkg_dir, 'config', 'only_robot_arm.rviz')
+    env_visual_config = os.path.join(pkg_dir, 'config', 'environment_visual.yaml')
 
     with open(urdf_file, 'r', encoding='utf-8') as f:
         robot_description = f.read()
@@ -47,6 +48,14 @@ def generate_launch_description():
                 'world_frame': 'world',
                 'anchor_frame': 'link_1'
             }]
+        ),
+
+        Node(
+            package='only_robot_arm',
+            executable='environment_visual_marker.py',
+            name='environment_visual_marker',
+            output='screen',
+            parameters=[env_visual_config]
         ),
 
         Node(

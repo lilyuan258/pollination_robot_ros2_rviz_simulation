@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="environment">
+  <link
+    name="environment_link">
+    <inertial>
+      <origin
+        xyz="-0.018648 1.5103 -0.8902"
+        rpy="0 0 0" />
+      <mass
+        value="1500.3" />
+      <inertia
+        ixx="17410"
+        ixy="0.15914"
+        ixz="-0.93898"
+        iyy="867.73"
+        iyz="0.070869"
+        izz="18269" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://environment/meshes/environment_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://environment/meshes/environment_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

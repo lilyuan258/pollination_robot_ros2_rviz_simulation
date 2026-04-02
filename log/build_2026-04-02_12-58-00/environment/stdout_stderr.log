@@ -1,0 +1,28 @@
+-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done (0.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/lcy/ros2_ws/build/environment
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/lcy/ros2_ws/install/environment/share/environment/config/joint_names_environment.yaml
+-- Symlinking: /home/lcy/ros2_ws/install/environment/share/environment/launch/display.launch
+-- Symlinking: /home/lcy/ros2_ws/install/environment/share/environment/launch/gazebo.launch
+-- Symlinking: /home/lcy/ros2_ws/install/environment/share/environment/meshes/environment_link.STL
+-- Symlinking: /home/lcy/ros2_ws/install/environment/share/environment/urdf/environment.csv
+-- Symlinking: /home/lcy/ros2_ws/install/environment/share/environment/urdf/environment.urdf
+-- Symlinking: /home/lcy/ros2_ws/install/environment/share/ament_index/resource_index/package_run_dependencies/environment
+-- Symlinking: /home/lcy/ros2_ws/install/environment/share/ament_index/resource_index/parent_prefix_path/environment
+-- Symlinking: /home/lcy/ros2_ws/install/environment/share/environment/environment/ament_prefix_path.sh
+-- Symlinking: /home/lcy/ros2_ws/install/environment/share/environment/environment/ament_prefix_path.dsv
+-- Symlinking: /home/lcy/ros2_ws/install/environment/share/environment/environment/path.sh
+-- Symlinking: /home/lcy/ros2_ws/install/environment/share/environment/environment/path.dsv
+-- Symlinking: /home/lcy/ros2_ws/install/environment/share/environment/local_setup.bash
+-- Symlinking: /home/lcy/ros2_ws/install/environment/share/environment/local_setup.sh
+-- Symlinking: /home/lcy/ros2_ws/install/environment/share/environment/local_setup.zsh
+-- Symlinking: /home/lcy/ros2_ws/install/environment/share/environment/local_setup.dsv
+-- Symlinking: /home/lcy/ros2_ws/install/environment/share/environment/package.dsv
+-- Symlinking: /home/lcy/ros2_ws/install/environment/share/ament_index/resource_index/packages/environment
+-- Symlinking: /home/lcy/ros2_ws/install/environment/share/environment/cmake/environmentConfig.cmake
+-- Symlinking: /home/lcy/ros2_ws/install/environment/share/environment/cmake/environmentConfig-version.cmake
+-- Symlinking: /home/lcy/ros2_ws/install/environment/share/environment/package.xml

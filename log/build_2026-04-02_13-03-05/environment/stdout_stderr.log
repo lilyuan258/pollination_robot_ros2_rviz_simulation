@@ -1,0 +1,23 @@
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/lcy/ros2_ws/install/environment/share/environment/config/joint_names_environment.yaml
+-- Up-to-date symlink: /home/lcy/ros2_ws/install/environment/share/environment/launch/display.launch
+-- Up-to-date symlink: /home/lcy/ros2_ws/install/environment/share/environment/launch/gazebo.launch
+-- Up-to-date symlink: /home/lcy/ros2_ws/install/environment/share/environment/meshes/environment_link.STL
+-- Up-to-date symlink: /home/lcy/ros2_ws/install/environment/share/environment/urdf/environment.csv
+-- Up-to-date symlink: /home/lcy/ros2_ws/install/environment/share/environment/urdf/environment.urdf
+-- Up-to-date symlink: /home/lcy/ros2_ws/install/environment/share/ament_index/resource_index/package_run_dependencies/environment
+-- Up-to-date symlink: /home/lcy/ros2_ws/install/environment/share/ament_index/resource_index/parent_prefix_path/environment
+-- Up-to-date symlink: /home/lcy/ros2_ws/install/environment/share/environment/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/lcy/ros2_ws/install/environment/share/environment/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/lcy/ros2_ws/install/environment/share/environment/environment/path.sh
+-- Up-to-date symlink: /home/lcy/ros2_ws/install/environment/share/environment/environment/path.dsv
+-- Up-to-date symlink: /home/lcy/ros2_ws/install/environment/share/environment/local_setup.bash
+-- Up-to-date symlink: /home/lcy/ros2_ws/install/environment/share/environment/local_setup.sh
+-- Up-to-date symlink: /home/lcy/ros2_ws/install/environment/share/environment/local_setup.zsh
+-- Up-to-date symlink: /home/lcy/ros2_ws/install/environment/share/environment/local_setup.dsv
+-- Symlinking: /home/lcy/ros2_ws/install/environment/share/environment/package.dsv
+-- Up-to-date symlink: /home/lcy/ros2_ws/install/environment/share/ament_index/resource_index/packages/environment
+-- Up-to-date symlink: /home/lcy/ros2_ws/install/environment/share/environment/cmake/environmentConfig.cmake
+-- Up-to-date symlink: /home/lcy/ros2_ws/install/environment/share/environment/cmake/environmentConfig-version.cmake
+-- Up-to-date symlink: /home/lcy/ros2_ws/install/environment/share/environment/package.xml

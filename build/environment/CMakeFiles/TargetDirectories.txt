@@ -1,0 +1,9 @@
+/home/lcy/ros2_ws/build/environment/CMakeFiles/uninstall.dir
+/home/lcy/ros2_ws/build/environment/CMakeFiles/environment_uninstall.dir
+/home/lcy/ros2_ws/build/environment/CMakeFiles/test.dir
+/home/lcy/ros2_ws/build/environment/CMakeFiles/edit_cache.dir
+/home/lcy/ros2_ws/build/environment/CMakeFiles/rebuild_cache.dir
+/home/lcy/ros2_ws/build/environment/CMakeFiles/list_install_components.dir
+/home/lcy/ros2_ws/build/environment/CMakeFiles/install.dir
+/home/lcy/ros2_ws/build/environment/CMakeFiles/install/local.dir
+/home/lcy/ros2_ws/build/environment/CMakeFiles/install/strip.dir
