@@ -1,0 +1,53 @@
+[0.009s] Invoking command in '/home/lcy/ros2_ws/build/only_robot_arm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/lcy/ros2_ws/build/only_robot_arm -- -j16 -l16
+[0.031s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.199s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.208s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[0.250s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.263s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.279s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.297s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.343s] -- Found moveit_msgs: 2.6.0 (/opt/ros/jazzy/share/moveit_msgs/cmake)
+[0.593s] -- Found moveit_ros_planning_interface: 2.12.4 (/opt/ros/jazzy/share/moveit_ros_planning_interface/cmake)
+[0.717s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: date_time filesystem program_options system thread 
+[0.740s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[0.803s] -- Found parameter_traits: 0.6.0 (/opt/ros/jazzy/share/parameter_traits/cmake)
+[0.856s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.859s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.952s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.973s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.996s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.084s] -- Found rclcpp_lifecycle: 28.1.16 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+[1.123s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: filesystem 
+[1.189s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.189s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.348s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono 
+[1.394s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread system filesystem regex date_time program_options 
+[1.420s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread 
+[1.539s] -- Configuring done (1.5s)
+[1.569s] -- Generating done (0.0s)
+[1.574s] -- Build files have been written to: /home/lcy/ros2_ws/build/only_robot_arm
+[1.618s] [ 50%] Building CXX object CMakeFiles/pollination_cycle_node.dir/src/pollination_cycle_node.cpp.o
+[3.215s] In file included from /home/lcy/ros2_ws/src/only_robot_arm/src/pollination_cycle_node.cpp:20:
+[3.215s] /opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77: note: ‘#pragma message: .h header is obsolete. Please use the .hpp header instead.’
+[3.216s]    51 | #pragma message(".h header is obsolete. Please use the .hpp header instead.")
+[3.216s]       |                                                                             ^
+[5.582s] In file included from /home/lcy/ros2_ws/src/only_robot_arm/src/pollination_cycle_node.cpp:21:
+[5.582s] /opt/ros/jazzy/include/moveit_core/moveit/robot_state/conversions.h:50:77: note: ‘#pragma message: .h header is obsolete. Please use the .hpp header instead.’
+[5.583s]    50 | #pragma message(".h header is obsolete. Please use the .hpp header instead.")
+[5.583s]       |                                                                             ^
+[5.738s] /home/lcy/ros2_ws/src/only_robot_arm/src/pollination_cycle_node.cpp: In member function ‘bool PollinationCycleNode::computeIkJointTarget(const geometry_msgs::msg::PoseStamped&, std::map<std::__cxx11::basic_string<char>, double>&)’:
+[5.739s] /home/lcy/ros2_ws/src/only_robot_arm/src/pollination_cycle_node.cpp:337:79: error: ‘class rclcpp::Duration’ has no member named ‘to_builtin_msg’
+[5.739s]   337 |     req->ik_request.timeout = rclcpp::Duration::from_seconds(ik_timeout_sec_).to_builtin_msg();
+[5.739s]       |                                                                               ^~~~~~~~~~~~~~
+[5.739s] /home/lcy/ros2_ws/src/only_robot_arm/src/pollination_cycle_node.cpp:338:21: error: ‘using moveit_msgs::srv::GetPositionIK_Request_<std::allocator<void> >::_ik_request_type = struct moveit_msgs::msg::PositionIKRequest_<std::allocator<void> >’ {aka ‘struct moveit_msgs::msg::PositionIKRequest_<std::allocator<void> >’} has no member named ‘attempts’
+[5.739s]   338 |     req->ik_request.attempts = 8;
+[5.739s]       |                     ^~~~~~~~
+[5.745s] /home/lcy/ros2_ws/src/only_robot_arm/src/pollination_cycle_node.cpp: In member function ‘bool PollinationCycleNode::simulatePlan(const moveit::planning_interface::MoveGroupInterface::Plan&)’:
+[5.745s] /home/lcy/ros2_ws/src/only_robot_arm/src/pollination_cycle_node.cpp:407:28: error: ‘const struct moveit::planning_interface::MoveGroupInterface::Plan’ has no member named ‘trajectory_’; did you mean ‘trajectory’?
+[5.745s]   407 |     const auto & jt = plan.trajectory_.joint_trajectory;
+[5.745s]       |                            ^~~~~~~~~~~
+[5.745s]       |                            trajectory
+[11.290s] gmake[2]: *** [CMakeFiles/pollination_cycle_node.dir/build.make:76: CMakeFiles/pollination_cycle_node.dir/src/pollination_cycle_node.cpp.o] Error 1
+[11.290s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pollination_cycle_node.dir/all] Error 2
+[11.291s] gmake: *** [Makefile:146: all] Error 2
+[11.293s] Invoked command in '/home/lcy/ros2_ws/build/only_robot_arm' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/lcy/ros2_ws/build/only_robot_arm -- -j16 -l16

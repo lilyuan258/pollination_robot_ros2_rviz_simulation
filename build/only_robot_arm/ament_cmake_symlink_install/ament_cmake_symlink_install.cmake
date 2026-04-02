@@ -315,11 +315,14 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install(DIRECTORY "launch" "urdf" "meshes" "config" "textures" "DESTINATION" "share/only_robot_arm")
-ament_cmake_symlink_install_directory("/home/lcy/ros2_ws/src/only_robot_arm" DIRECTORY "launch" "urdf" "meshes" "config" "textures" "DESTINATION" "share/only_robot_arm")
+# install(DIRECTORY "launch" "urdf" "meshes" "config" "DESTINATION" "share/only_robot_arm")
+ament_cmake_symlink_install_directory("/home/lcy/ros2_ws/src/only_robot_arm" DIRECTORY "launch" "urdf" "meshes" "config" "DESTINATION" "share/only_robot_arm")
 
 # install(PROGRAMS "scripts/watermelon_flower_marker.py" "DESTINATION" "lib/only_robot_arm")
 ament_cmake_symlink_install_programs("/home/lcy/ros2_ws/src/only_robot_arm" PROGRAMS "scripts/watermelon_flower_marker.py" "DESTINATION" "lib/only_robot_arm")
+
+# install("TARGETS" "pollination_cycle_node" "DESTINATION" "lib/only_robot_arm")
+include("/home/lcy/ros2_ws/build/only_robot_arm/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(FILES "/home/lcy/ros2_ws/build/only_robot_arm/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/only_robot_arm" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/lcy/ros2_ws/src/only_robot_arm" FILES "/home/lcy/ros2_ws/build/only_robot_arm/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/only_robot_arm" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

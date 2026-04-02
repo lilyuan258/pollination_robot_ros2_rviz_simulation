@@ -529,3 +529,49 @@ events:
       
       
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/boost_thread-1.83.0/boost_thread-config.cmake:118 (find_dependency)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake:141 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake:262 (boost_find_component)"
+      - "/usr/share/cmake-3.28/Modules/FindBoost.cmake:594 (find_package)"
+      - "/opt/ros/jazzy/share/moveit_ros_planning_interface/cmake/ConfigExtras.cmake:7 (find_package)"
+      - "/opt/ros/jazzy/share/moveit_ros_planning_interface/cmake/moveit_ros_planning_interfaceConfig.cmake:41 (include)"
+      - "CMakeLists.txt:7 (find_package)"
+    directories:
+      source: "/home/lcy/ros2_ws/build/only_robot_arm/CMakeFiles/CMakeScratch/TryCompile-Zxo5h2"
+      binary: "/home/lcy/ros2_ws/build/only_robot_arm/CMakeFiles/CMakeScratch/TryCompile-Zxo5h2"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/opt/ros/jazzy/share/fastrtps_cmake_module/cmake/Modules"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/lcy/ros2_ws/build/only_robot_arm/CMakeFiles/CMakeScratch/TryCompile-Zxo5h2'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7383a/fast
+        gmake[1]: Entering directory '/home/lcy/ros2_ws/build/only_robot_arm/CMakeFiles/CMakeScratch/TryCompile-Zxo5h2'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_7383a.dir/build.make CMakeFiles/cmTC_7383a.dir/build
+        gmake[2]: Entering directory '/home/lcy/ros2_ws/build/only_robot_arm/CMakeFiles/CMakeScratch/TryCompile-Zxo5h2'
+        Building C object CMakeFiles/cmTC_7383a.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_7383a.dir/src.c.o -c /home/lcy/ros2_ws/build/only_robot_arm/CMakeFiles/CMakeScratch/TryCompile-Zxo5h2/src.c
+        Linking C executable cmTC_7383a
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7383a.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_7383a.dir/src.c.o -o cmTC_7383a 
+        gmake[2]: Leaving directory '/home/lcy/ros2_ws/build/only_robot_arm/CMakeFiles/CMakeScratch/TryCompile-Zxo5h2'
+        gmake[1]: Leaving directory '/home/lcy/ros2_ws/build/only_robot_arm/CMakeFiles/CMakeScratch/TryCompile-Zxo5h2'
+        
+      exitCode: 0
+...

@@ -1,0 +1,8 @@
+[ 50%] Building CXX object CMakeFiles/pollination_cycle_node.dir/src/pollination_cycle_node.cpp.o
+/home/lcy/ros2_ws/src/only_robot_arm/src/pollination_cycle_node.cpp: In lambda function:
+/home/lcy/ros2_ws/src/only_robot_arm/src/pollination_cycle_node.cpp:375:25: error: ‘using moveit_msgs::srv::GetPositionIK_Request_<std::allocator<void> >::_ik_request_type = struct moveit_msgs::msg::PositionIKRequest_<std::allocator<void> >’ {aka ‘struct moveit_msgs::msg::PositionIKRequest_<std::allocator<void> >’} has no member named ‘attempts’
+  375 |         req->ik_request.attempts = 12;
+      |                         ^~~~~~~~
+gmake[2]: *** [CMakeFiles/pollination_cycle_node.dir/build.make:76: CMakeFiles/pollination_cycle_node.dir/src/pollination_cycle_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pollination_cycle_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

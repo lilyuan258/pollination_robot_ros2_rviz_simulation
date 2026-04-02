@@ -1,0 +1,189 @@
+[0.000000] (-) TimerEvent: {}
+[0.000154] (-) JobUnselected: {'identifier': 'only_robot_arm_moveit_config'}
+[0.000317] (only_robot_arm) JobQueued: {'identifier': 'only_robot_arm', 'dependencies': OrderedDict()}
+[0.000501] (only_robot_arm) JobStarted: {'identifier': 'only_robot_arm'}
+[0.006871] (only_robot_arm) JobProgress: {'identifier': 'only_robot_arm', 'progress': 'cmake'}
+[0.007334] (only_robot_arm) JobProgress: {'identifier': 'only_robot_arm', 'progress': 'build'}
+[0.007755] (only_robot_arm) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/lcy/ros2_ws/build/only_robot_arm', '--', '-j16', '-l16'], 'cwd': '/home/lcy/ros2_ws/build/only_robot_arm', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/home/lcy', 'VSCODE_ESM_ENTRYPOINT': 'vs/workbench/api/node/extensionHostProcess', 'HTTPS_PROXY': 'http://127.0.0.1:7890', 'CODEX_CI': '1', 'LANGUAGE': 'zh_CN:en', 'USER': 'lcy', 'SNAP_COMMON': '/var/snap/code/common', 'LC_TIME': 'C.UTF-8', 'CODEX_INTERNAL_ORIGINATOR_OVERRIDE': 'codex_vscode', 'VSCODE_NLS_CONFIG': '{"userLocale":"zh-cn","osLocale":"zh-cn","resolvedLanguage":"zh-cn","defaultMessagesFile":"/snap/code/231/usr/share/code/resources/app/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/lcy/.config/Code/clp/e48cb33a7b5796d4ba1f43c8a8193679.zh-cn/tcf.json","messagesFile":"/home/lcy/.config/Code/clp/e48cb33a7b5796d4ba1f43c8a8193679.zh-cn/cfbea10c5ffb233ea9177d34726e6056e89913dc/nls.messages.json","corruptMarkerFile":"/home/lcy/.config/Code/clp/e48cb33a7b5796d4ba1f43c8a8193679.zh-cn/corrupted.info"},"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"e48cb33a7b5796d4ba1f43c8a8193679.zh-cn","_languagePackSupport":true,"_translationsConfigFile":"/home/lcy/.config/Code/clp/e48cb33a7b5796d4ba1f43c8a8193679.zh-cn/tcf.json","_cacheRoot":"/home/lcy/.config/Code/clp/e48cb33a7b5796d4ba1f43c8a8193679.zh-cn","_resolvedLanguagePackCoreLocation":"/home/lcy/.config/Code/clp/e48cb33a7b5796d4ba1f43c8a8193679.zh-cn/cfbea10c5ffb233ea9177d34726e6056e89913dc","_corruptedFile":"/home/lcy/.config/Code/clp/e48cb33a7b5796d4ba1f43c8a8193679.zh-cn/corrupted.info"}', 'FONTCONFIG_PATH': '/etc/fonts', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'STARSHIP_SHELL': 'bash', 'GIO_MODULE_DIR': '/home/lcy/snap/code/common/.cache/gio-modules', 'VSCODE_HANDLES_UNCAUGHT_ERRORS': 'true', 'XDG_SESSION_TYPE': 'x11', 'DEBUG': 'release', 'SNAP_UID': '1000', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/lcy', 'CHROME_DESKTOP': 'code.desktop', 'CONDA_SHLVL': '0', 'SNAP_LIBRARY_PATH': '/var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32', 'OLDPWD': '/home/lcy/ros2_ws', 'DESKTOP_SESSION': 'ubuntu', 'SNAP_USER_DATA': '/home/lcy/snap/code/231', 'GTK_PATH': '/snap/code/231/usr/lib/x86_64-linux-gnu/gtk-3.0', 'VSCODE_IPC_HOOK': '/run/user/1000/vscode-ed31b459-1.11-main.sock', 'GTK_IM_MODULE_FILE': '/home/lcy/snap/code/common/.cache/immodules/immodules.cache', 'GIO_LAUNCHED_DESKTOP_FILE': '/var/lib/snapd/desktop/applications/code_code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SDL_IM_MODULE': 'fcitx', 'PAGER': 'cat', 'LC_MONETARY': 'C.UTF-8', 'COPILOT_OTEL_FILE_EXPORTER_PATH': '/dev/null', 'MANAGERPID': '3464', 'LC_CTYPE': 'C.UTF-8', 'SYSTEMD_EXEC_PID': '3934', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'NO_COLOR': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'SNAP_REVISION': '231', 'COLORTERM': '', '_CONDA_ROOT': '/home/lcy/miniconda3', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '5234', 'VSCODE_CRASH_REPORTER_PROCESS_TYPE': 'extensionHost', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'APPLICATION_INSIGHTS_NO_STATSBEAT': 'true', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'lcy', 'OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT': 'true', 'SNAP_CONTEXT': 'M6l33kKDnzxfuZ0-MZ-yseYQyCsE0236OQdgSeBhiE8-qTDNvrsR', 'JOURNAL_STREAM': '9:15293', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'SNAP_VERSION': 'cfbea10c', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/share/ubuntu:/usr/share/gnome:/home/lcy/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'RUST_LOG': 'warn', 'USERNAME': 'lcy', 'TERM': 'dumb', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'SNAP_INSTANCE_NAME': 'code', 'FC_FONTATIONS': '1', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/home/lcy/.local/bin:/home/lcy/.codex/tmp/arg0/codex-arg0M5Oupk:/home/lcy/.local/bin:/home/lcy/miniconda3/condabin:/home/lcy/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/lcy/.vscode/extensions/openai.chatgpt-26.325.31654-linux-x64/bin/linux-x86_64', 'SESSION_MANAGER': 'local/lcy:@/tmp/.ICE-unix/3865,unix/lcy:/tmp/.ICE-unix/3865', 'GTK_EXE_PREFIX': '/snap/code/231/usr', 'INVOCATION_ID': '803a5e3b402b43afb010b52a82f20971', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'C.UTF-8', 'SNAP_DATA': '/var/snap/code/231', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':1', 'LOCPATH': '/snap/code/231/usr/lib/locale', 'CODEX_SANDBOX_NETWORK_DISABLED': '1', 'LANG': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'C.UTF-8', 'XDG_DATA_HOME': '/home/lcy/snap/code/231/.local/share', 'XMODIFIERS': '@im=fcitx', 'GH_PAGER': 'cat', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'COPILOT_OTEL_ENABLED': 'true', 'SNAP_USER_COMMON': '/home/lcy/snap/code/common', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'GSETTINGS_SCHEMA_DIR': '/home/lcy/snap/code/231/.local/share/glib-2.0/schemas', 'SNAP_ARCH': 'amd64', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SNAP_COOKIE': 'M6l33kKDnzxfuZ0-MZ-yseYQyCsE0236OQdgSeBhiE8-qTDNvrsR', 'CONDA_PYTHON_EXE': '/home/lcy/miniconda3/bin/python', 'SHELL': '/bin/bash', 'LC_NAME': 'C.UTF-8', 'GDK_PIXBUF_MODULEDIR': '/snap/code/231/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders', 'QT_ACCESSIBILITY': '1', 'ELECTRON_RUN_AS_NODE': '1', 'ROS_MASTER_URI': 'http://127.0.0.1:11311', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'SNAP_NAME': 'code', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'CODEX_THREAD_ID': '019d4c19-9c99-7a82-8038-11123a40b850', 'LC_MEASUREMENT': 'C.UTF-8', 'GDK_PIXBUF_MODULE_FILE': '/home/lcy/snap/code/common/.cache/gdk-pixbuf-loaders.cache', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', '_CONDA_EXE': '/home/lcy/miniconda3/bin/conda', 'LC_IDENTIFICATION': 'C.UTF-8', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'SNAP_LAUNCHER_ARCH_TRIPLET': 'x86_64-linux-gnu', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'fcitx', 'MINERU_API_TOKEN': 'eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFM1MTIifQ.eyJqdGkiOiI5MTYwMDIyNyIsInJvbCI6IlJPTEVfUkVHSVNURVIiLCJpc3MiOiJPcGVuWExhYiIsImlhdCI6MTc3MjY5NDA0MSwiY2xpZW50SWQiOiJsa3pkeDU3bnZ5MjJqa3BxOXgydyIsInBob25lIjoiIiwib3BlbklkIjpudWxsLCJ1dWlkIjoiOWVkY2ZhNjAtYjQ4MC00ZWRlLWJkMzUtMmM0MjhkZTEwOWY5IiwiZW1haWwiOiIiLCJleHAiOjE3ODA0NzAwNDF9.1MJitT-bhwskcLLZpzGXUH0Zr-s7r9xSxn4imD-6x7vE1EOfjEvh1QnuCsvt1pm20z09HKoP2GhViNp6gW-xiA', 'PWD': '/home/lcy/ros2_ws/build/only_robot_arm', 'VSCODE_CLI': '1', 'LC_ALL': 'C.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CONDA_EXE': '/home/lcy/miniconda3/bin/conda', 'SNAP_REAL_HOME': '/home/lcy', 'VSCODE_CODE_CACHE_PATH': '/home/lcy/.config/Code/CachedData/cfbea10c5ffb233ea9177d34726e6056e89913dc', 'CLUTTER_IM_MODULE': 'xim', 'XDG_DATA_DIRS': '/home/lcy/snap/code/231/.local/share/flatpak/exports/share:/home/lcy/snap/code/231/.local/share:/home/lcy/snap/code/231:/snap/code/231/usr/share:/usr/share/ubuntu:/usr/share/gnome:/home/lcy/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'SNAP_EUID': '1000', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'STARSHIP_SESSION_KEY': '7456927248612891', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'SNAP': '/snap/code/231', 'HTTP_PROXY': 'http://127.0.0.1:7890', 'ROS_HOSTNAME': '127.0.0.1', 'LC_NUMERIC': 'C.UTF-8', 'LC_PAPER': 'C.UTF-8', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'ELECTRON_NO_ATTACH_CONSOLE': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'VSCODE_PID': '5335', 'COPILOT_OTEL_EXPORTER_TYPE': 'file'}), 'shell': False}
+[0.083103] (only_robot_arm) StdoutLine: {'line': b'[ 50%] Building CXX object CMakeFiles/pollination_cycle_node.dir/src/pollination_cycle_node.cpp.o\n'}
+[0.099853] (-) TimerEvent: {}
+[0.200037] (-) TimerEvent: {}
+[0.300242] (-) TimerEvent: {}
+[0.400492] (-) TimerEvent: {}
+[0.500666] (-) TimerEvent: {}
+[0.600848] (-) TimerEvent: {}
+[0.701018] (-) TimerEvent: {}
+[0.801179] (-) TimerEvent: {}
+[0.901366] (-) TimerEvent: {}
+[1.001542] (-) TimerEvent: {}
+[1.101708] (-) TimerEvent: {}
+[1.201883] (-) TimerEvent: {}
+[1.302052] (-) TimerEvent: {}
+[1.402210] (-) TimerEvent: {}
+[1.502375] (-) TimerEvent: {}
+[1.602578] (-) TimerEvent: {}
+[1.702751] (-) TimerEvent: {}
+[1.802930] (-) TimerEvent: {}
+[1.903105] (-) TimerEvent: {}
+[2.003295] (-) TimerEvent: {}
+[2.103467] (-) TimerEvent: {}
+[2.203649] (-) TimerEvent: {}
+[2.303845] (-) TimerEvent: {}
+[2.404036] (-) TimerEvent: {}
+[2.504229] (-) TimerEvent: {}
+[2.604426] (-) TimerEvent: {}
+[2.704595] (-) TimerEvent: {}
+[2.804787] (-) TimerEvent: {}
+[2.904983] (-) TimerEvent: {}
+[3.005177] (-) TimerEvent: {}
+[3.105374] (-) TimerEvent: {}
+[3.205563] (-) TimerEvent: {}
+[3.305736] (-) TimerEvent: {}
+[3.405921] (-) TimerEvent: {}
+[3.506071] (-) TimerEvent: {}
+[3.606234] (-) TimerEvent: {}
+[3.706449] (-) TimerEvent: {}
+[3.806643] (-) TimerEvent: {}
+[3.906841] (-) TimerEvent: {}
+[4.007008] (-) TimerEvent: {}
+[4.107178] (-) TimerEvent: {}
+[4.207367] (-) TimerEvent: {}
+[4.307595] (-) TimerEvent: {}
+[4.407785] (-) TimerEvent: {}
+[4.507972] (-) TimerEvent: {}
+[4.608267] (-) TimerEvent: {}
+[4.708451] (-) TimerEvent: {}
+[4.809142] (-) TimerEvent: {}
+[4.909336] (-) TimerEvent: {}
+[5.009546] (-) TimerEvent: {}
+[5.109750] (-) TimerEvent: {}
+[5.209929] (-) TimerEvent: {}
+[5.310088] (-) TimerEvent: {}
+[5.410254] (-) TimerEvent: {}
+[5.510424] (-) TimerEvent: {}
+[5.610608] (-) TimerEvent: {}
+[5.710797] (-) TimerEvent: {}
+[5.810966] (-) TimerEvent: {}
+[5.911127] (-) TimerEvent: {}
+[6.011308] (-) TimerEvent: {}
+[6.111450] (-) TimerEvent: {}
+[6.211627] (-) TimerEvent: {}
+[6.311818] (-) TimerEvent: {}
+[6.411992] (-) TimerEvent: {}
+[6.512185] (-) TimerEvent: {}
+[6.612373] (-) TimerEvent: {}
+[6.712557] (-) TimerEvent: {}
+[6.812751] (-) TimerEvent: {}
+[6.912933] (-) TimerEvent: {}
+[7.013115] (-) TimerEvent: {}
+[7.113313] (-) TimerEvent: {}
+[7.213453] (-) TimerEvent: {}
+[7.313621] (-) TimerEvent: {}
+[7.413785] (-) TimerEvent: {}
+[7.513946] (-) TimerEvent: {}
+[7.614110] (-) TimerEvent: {}
+[7.714276] (-) TimerEvent: {}
+[7.814445] (-) TimerEvent: {}
+[7.914616] (-) TimerEvent: {}
+[8.014801] (-) TimerEvent: {}
+[8.114978] (-) TimerEvent: {}
+[8.215163] (-) TimerEvent: {}
+[8.315323] (-) TimerEvent: {}
+[8.415503] (-) TimerEvent: {}
+[8.515698] (-) TimerEvent: {}
+[8.615876] (-) TimerEvent: {}
+[8.716053] (-) TimerEvent: {}
+[8.816235] (-) TimerEvent: {}
+[8.916427] (-) TimerEvent: {}
+[9.016606] (-) TimerEvent: {}
+[9.116792] (-) TimerEvent: {}
+[9.216967] (-) TimerEvent: {}
+[9.317166] (-) TimerEvent: {}
+[9.417361] (-) TimerEvent: {}
+[9.517545] (-) TimerEvent: {}
+[9.617732] (-) TimerEvent: {}
+[9.717917] (-) TimerEvent: {}
+[9.818101] (-) TimerEvent: {}
+[9.918285] (-) TimerEvent: {}
+[10.018454] (-) TimerEvent: {}
+[10.118639] (-) TimerEvent: {}
+[10.218808] (-) TimerEvent: {}
+[10.318981] (-) TimerEvent: {}
+[10.419155] (-) TimerEvent: {}
+[10.519333] (-) TimerEvent: {}
+[10.619519] (-) TimerEvent: {}
+[10.719714] (-) TimerEvent: {}
+[10.819892] (-) TimerEvent: {}
+[10.920079] (-) TimerEvent: {}
+[11.020256] (-) TimerEvent: {}
+[11.120486] (-) TimerEvent: {}
+[11.220674] (-) TimerEvent: {}
+[11.320870] (-) TimerEvent: {}
+[11.421077] (-) TimerEvent: {}
+[11.521251] (-) TimerEvent: {}
+[11.621426] (-) TimerEvent: {}
+[11.721586] (-) TimerEvent: {}
+[11.821759] (-) TimerEvent: {}
+[11.921936] (-) TimerEvent: {}
+[12.022126] (-) TimerEvent: {}
+[12.122308] (-) TimerEvent: {}
+[12.222686] (-) TimerEvent: {}
+[12.322887] (-) TimerEvent: {}
+[12.423073] (-) TimerEvent: {}
+[12.523261] (-) TimerEvent: {}
+[12.623461] (-) TimerEvent: {}
+[12.723632] (-) TimerEvent: {}
+[12.823824] (-) TimerEvent: {}
+[12.924377] (-) TimerEvent: {}
+[13.024634] (-) TimerEvent: {}
+[13.124831] (-) TimerEvent: {}
+[13.162312] (only_robot_arm) StdoutLine: {'line': b'[100%] Linking CXX executable pollination_cycle_node\n'}
+[13.224940] (-) TimerEvent: {}
+[13.325124] (-) TimerEvent: {}
+[13.425313] (-) TimerEvent: {}
+[13.525455] (-) TimerEvent: {}
+[13.625668] (-) TimerEvent: {}
+[13.725875] (-) TimerEvent: {}
+[13.807071] (only_robot_arm) StdoutLine: {'line': b'[100%] Built target pollination_cycle_node\n'}
+[13.817997] (only_robot_arm) CommandEnded: {'returncode': 0}
+[13.818694] (only_robot_arm) JobProgress: {'identifier': 'only_robot_arm', 'progress': 'install'}
+[13.825936] (-) TimerEvent: {}
+[13.826473] (only_robot_arm) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/lcy/ros2_ws/build/only_robot_arm'], 'cwd': '/home/lcy/ros2_ws/build/only_robot_arm', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/home/lcy', 'VSCODE_ESM_ENTRYPOINT': 'vs/workbench/api/node/extensionHostProcess', 'HTTPS_PROXY': 'http://127.0.0.1:7890', 'CODEX_CI': '1', 'LANGUAGE': 'zh_CN:en', 'USER': 'lcy', 'SNAP_COMMON': '/var/snap/code/common', 'LC_TIME': 'C.UTF-8', 'CODEX_INTERNAL_ORIGINATOR_OVERRIDE': 'codex_vscode', 'VSCODE_NLS_CONFIG': '{"userLocale":"zh-cn","osLocale":"zh-cn","resolvedLanguage":"zh-cn","defaultMessagesFile":"/snap/code/231/usr/share/code/resources/app/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/lcy/.config/Code/clp/e48cb33a7b5796d4ba1f43c8a8193679.zh-cn/tcf.json","messagesFile":"/home/lcy/.config/Code/clp/e48cb33a7b5796d4ba1f43c8a8193679.zh-cn/cfbea10c5ffb233ea9177d34726e6056e89913dc/nls.messages.json","corruptMarkerFile":"/home/lcy/.config/Code/clp/e48cb33a7b5796d4ba1f43c8a8193679.zh-cn/corrupted.info"},"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"e48cb33a7b5796d4ba1f43c8a8193679.zh-cn","_languagePackSupport":true,"_translationsConfigFile":"/home/lcy/.config/Code/clp/e48cb33a7b5796d4ba1f43c8a8193679.zh-cn/tcf.json","_cacheRoot":"/home/lcy/.config/Code/clp/e48cb33a7b5796d4ba1f43c8a8193679.zh-cn","_resolvedLanguagePackCoreLocation":"/home/lcy/.config/Code/clp/e48cb33a7b5796d4ba1f43c8a8193679.zh-cn/cfbea10c5ffb233ea9177d34726e6056e89913dc","_corruptedFile":"/home/lcy/.config/Code/clp/e48cb33a7b5796d4ba1f43c8a8193679.zh-cn/corrupted.info"}', 'FONTCONFIG_PATH': '/etc/fonts', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'STARSHIP_SHELL': 'bash', 'GIO_MODULE_DIR': '/home/lcy/snap/code/common/.cache/gio-modules', 'VSCODE_HANDLES_UNCAUGHT_ERRORS': 'true', 'XDG_SESSION_TYPE': 'x11', 'DEBUG': 'release', 'SNAP_UID': '1000', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/lcy', 'CHROME_DESKTOP': 'code.desktop', 'CONDA_SHLVL': '0', 'SNAP_LIBRARY_PATH': '/var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32', 'OLDPWD': '/home/lcy/ros2_ws', 'DESKTOP_SESSION': 'ubuntu', 'SNAP_USER_DATA': '/home/lcy/snap/code/231', 'GTK_PATH': '/snap/code/231/usr/lib/x86_64-linux-gnu/gtk-3.0', 'VSCODE_IPC_HOOK': '/run/user/1000/vscode-ed31b459-1.11-main.sock', 'GTK_IM_MODULE_FILE': '/home/lcy/snap/code/common/.cache/immodules/immodules.cache', 'GIO_LAUNCHED_DESKTOP_FILE': '/var/lib/snapd/desktop/applications/code_code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SDL_IM_MODULE': 'fcitx', 'PAGER': 'cat', 'LC_MONETARY': 'C.UTF-8', 'COPILOT_OTEL_FILE_EXPORTER_PATH': '/dev/null', 'MANAGERPID': '3464', 'LC_CTYPE': 'C.UTF-8', 'SYSTEMD_EXEC_PID': '3934', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'NO_COLOR': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'SNAP_REVISION': '231', 'COLORTERM': '', '_CONDA_ROOT': '/home/lcy/miniconda3', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '5234', 'VSCODE_CRASH_REPORTER_PROCESS_TYPE': 'extensionHost', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'APPLICATION_INSIGHTS_NO_STATSBEAT': 'true', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'lcy', 'OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT': 'true', 'SNAP_CONTEXT': 'M6l33kKDnzxfuZ0-MZ-yseYQyCsE0236OQdgSeBhiE8-qTDNvrsR', 'JOURNAL_STREAM': '9:15293', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'SNAP_VERSION': 'cfbea10c', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/share/ubuntu:/usr/share/gnome:/home/lcy/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'RUST_LOG': 'warn', 'USERNAME': 'lcy', 'TERM': 'dumb', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'SNAP_INSTANCE_NAME': 'code', 'FC_FONTATIONS': '1', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/home/lcy/.local/bin:/home/lcy/.codex/tmp/arg0/codex-arg0M5Oupk:/home/lcy/.local/bin:/home/lcy/miniconda3/condabin:/home/lcy/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/lcy/.vscode/extensions/openai.chatgpt-26.325.31654-linux-x64/bin/linux-x86_64', 'SESSION_MANAGER': 'local/lcy:@/tmp/.ICE-unix/3865,unix/lcy:/tmp/.ICE-unix/3865', 'GTK_EXE_PREFIX': '/snap/code/231/usr', 'INVOCATION_ID': '803a5e3b402b43afb010b52a82f20971', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'C.UTF-8', 'SNAP_DATA': '/var/snap/code/231', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':1', 'LOCPATH': '/snap/code/231/usr/lib/locale', 'CODEX_SANDBOX_NETWORK_DISABLED': '1', 'LANG': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'C.UTF-8', 'XDG_DATA_HOME': '/home/lcy/snap/code/231/.local/share', 'XMODIFIERS': '@im=fcitx', 'GH_PAGER': 'cat', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'COPILOT_OTEL_ENABLED': 'true', 'SNAP_USER_COMMON': '/home/lcy/snap/code/common', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'GSETTINGS_SCHEMA_DIR': '/home/lcy/snap/code/231/.local/share/glib-2.0/schemas', 'SNAP_ARCH': 'amd64', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SNAP_COOKIE': 'M6l33kKDnzxfuZ0-MZ-yseYQyCsE0236OQdgSeBhiE8-qTDNvrsR', 'CONDA_PYTHON_EXE': '/home/lcy/miniconda3/bin/python', 'SHELL': '/bin/bash', 'LC_NAME': 'C.UTF-8', 'GDK_PIXBUF_MODULEDIR': '/snap/code/231/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders', 'QT_ACCESSIBILITY': '1', 'ELECTRON_RUN_AS_NODE': '1', 'ROS_MASTER_URI': 'http://127.0.0.1:11311', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'SNAP_NAME': 'code', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'CODEX_THREAD_ID': '019d4c19-9c99-7a82-8038-11123a40b850', 'LC_MEASUREMENT': 'C.UTF-8', 'GDK_PIXBUF_MODULE_FILE': '/home/lcy/snap/code/common/.cache/gdk-pixbuf-loaders.cache', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', '_CONDA_EXE': '/home/lcy/miniconda3/bin/conda', 'LC_IDENTIFICATION': 'C.UTF-8', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'SNAP_LAUNCHER_ARCH_TRIPLET': 'x86_64-linux-gnu', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'fcitx', 'MINERU_API_TOKEN': 'eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFM1MTIifQ.eyJqdGkiOiI5MTYwMDIyNyIsInJvbCI6IlJPTEVfUkVHSVNURVIiLCJpc3MiOiJPcGVuWExhYiIsImlhdCI6MTc3MjY5NDA0MSwiY2xpZW50SWQiOiJsa3pkeDU3bnZ5MjJqa3BxOXgydyIsInBob25lIjoiIiwib3BlbklkIjpudWxsLCJ1dWlkIjoiOWVkY2ZhNjAtYjQ4MC00ZWRlLWJkMzUtMmM0MjhkZTEwOWY5IiwiZW1haWwiOiIiLCJleHAiOjE3ODA0NzAwNDF9.1MJitT-bhwskcLLZpzGXUH0Zr-s7r9xSxn4imD-6x7vE1EOfjEvh1QnuCsvt1pm20z09HKoP2GhViNp6gW-xiA', 'PWD': '/home/lcy/ros2_ws/build/only_robot_arm', 'VSCODE_CLI': '1', 'LC_ALL': 'C.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CONDA_EXE': '/home/lcy/miniconda3/bin/conda', 'SNAP_REAL_HOME': '/home/lcy', 'VSCODE_CODE_CACHE_PATH': '/home/lcy/.config/Code/CachedData/cfbea10c5ffb233ea9177d34726e6056e89913dc', 'CLUTTER_IM_MODULE': 'xim', 'XDG_DATA_DIRS': '/home/lcy/snap/code/231/.local/share/flatpak/exports/share:/home/lcy/snap/code/231/.local/share:/home/lcy/snap/code/231:/snap/code/231/usr/share:/usr/share/ubuntu:/usr/share/gnome:/home/lcy/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'SNAP_EUID': '1000', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'STARSHIP_SESSION_KEY': '7456927248612891', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'SNAP': '/snap/code/231', 'HTTP_PROXY': 'http://127.0.0.1:7890', 'ROS_HOSTNAME': '127.0.0.1', 'LC_NUMERIC': 'C.UTF-8', 'LC_PAPER': 'C.UTF-8', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'ELECTRON_NO_ATTACH_CONSOLE': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'VSCODE_PID': '5335', 'COPILOT_OTEL_EXPORTER_TYPE': 'file'}), 'shell': False}
+[13.833495] (only_robot_arm) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[13.833885] (only_robot_arm) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[13.834241] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/launch/display.launch\n'}
+[13.834419] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/launch/display_jazzy.launch.py\n'}
+[13.834565] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/launch/gazebo.launch\n'}
+[13.834739] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/urdf/only_robot_arm.csv\n'}
+[13.834872] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/urdf/only_robot_arm.urdf\n'}
+[13.835122] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/base_link.STL\n'}
+[13.835235] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/camera_link.STL\n'}
+[13.835353] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_1.STL\n'}
+[13.835532] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_2.STL\n'}
+[13.835709] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_3.STL\n'}
+[13.835772] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_4.STL\n'}
+[13.835869] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_5.STL\n'}
+[13.835978] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_6.STL\n'}
+[13.836082] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/pollination_tip_link.STL\n'}
+[13.836311] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/config/joint_names_only_robot_arm.yaml\n'}
+[13.836432] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/config/only_robot_arm.rviz\n'}
+[13.836585] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/lib/only_robot_arm/watermelon_flower_marker.py\n'}
+[13.836808] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/lib/only_robot_arm/pollination_cycle_node\n'}
+[13.836980] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/ament_index/resource_index/package_run_dependencies/only_robot_arm\n'}
+[13.837140] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/ament_index/resource_index/parent_prefix_path/only_robot_arm\n'}
+[13.837294] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/environment/ament_prefix_path.sh\n'}
+[13.837443] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/environment/ament_prefix_path.dsv\n'}
+[13.837593] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/environment/path.sh\n'}
+[13.837735] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/environment/path.dsv\n'}
+[13.837879] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/local_setup.bash\n'}
+[13.838018] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/local_setup.sh\n'}
+[13.838158] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/local_setup.zsh\n'}
+[13.838299] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/local_setup.dsv\n'}
+[13.838411] (only_robot_arm) StdoutLine: {'line': b'-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/package.dsv\n'}
+[13.847462] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/ament_index/resource_index/packages/only_robot_arm\n'}
+[13.847687] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/cmake/only_robot_armConfig.cmake\n'}
+[13.847867] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/cmake/only_robot_armConfig-version.cmake\n'}
+[13.848043] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/package.xml\n'}
+[13.849669] (only_robot_arm) CommandEnded: {'returncode': 0}
+[13.860736] (only_robot_arm) JobEnded: {'identifier': 'only_robot_arm', 'rc': 0}
+[13.861154] (-) EventReactorShutdown: {}

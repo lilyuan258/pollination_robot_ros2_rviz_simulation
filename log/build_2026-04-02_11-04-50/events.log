@@ -1,0 +1,174 @@
+[0.000000] (-) TimerEvent: {}
+[0.000105] (only_robot_arm) JobQueued: {'identifier': 'only_robot_arm', 'dependencies': OrderedDict()}
+[0.000138] (only_robot_arm_moveit_config) JobQueued: {'identifier': 'only_robot_arm_moveit_config', 'dependencies': OrderedDict({'only_robot_arm': '/home/lcy/ros2_ws/install/only_robot_arm'})}
+[0.000164] (only_robot_arm) JobStarted: {'identifier': 'only_robot_arm'}
+[0.007277] (only_robot_arm) JobProgress: {'identifier': 'only_robot_arm', 'progress': 'cmake'}
+[0.007767] (only_robot_arm) JobProgress: {'identifier': 'only_robot_arm', 'progress': 'build'}
+[0.008350] (only_robot_arm) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/lcy/ros2_ws/build/only_robot_arm', '--', '-j16', '-l16'], 'cwd': '/home/lcy/ros2_ws/build/only_robot_arm', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/home/lcy', 'CODEX_CI': '1', 'HTTPS_PROXY': 'http://127.0.0.1:7890', 'VSCODE_ESM_ENTRYPOINT': 'vs/workbench/api/node/extensionHostProcess', 'CODEX_INTERNAL_ORIGINATOR_OVERRIDE': 'codex_vscode', 'LANGUAGE': 'zh_CN:en', 'LC_TIME': 'C.UTF-8', 'SNAP_COMMON': '/var/snap/code/common', 'USER': 'lcy', 'VSCODE_NLS_CONFIG': '{"userLocale":"zh-cn","osLocale":"zh-cn","resolvedLanguage":"zh-cn","defaultMessagesFile":"/snap/code/231/usr/share/code/resources/app/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/lcy/.config/Code/clp/e48cb33a7b5796d4ba1f43c8a8193679.zh-cn/tcf.json","messagesFile":"/home/lcy/.config/Code/clp/e48cb33a7b5796d4ba1f43c8a8193679.zh-cn/cfbea10c5ffb233ea9177d34726e6056e89913dc/nls.messages.json","corruptMarkerFile":"/home/lcy/.config/Code/clp/e48cb33a7b5796d4ba1f43c8a8193679.zh-cn/corrupted.info"},"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"e48cb33a7b5796d4ba1f43c8a8193679.zh-cn","_languagePackSupport":true,"_translationsConfigFile":"/home/lcy/.config/Code/clp/e48cb33a7b5796d4ba1f43c8a8193679.zh-cn/tcf.json","_cacheRoot":"/home/lcy/.config/Code/clp/e48cb33a7b5796d4ba1f43c8a8193679.zh-cn","_resolvedLanguagePackCoreLocation":"/home/lcy/.config/Code/clp/e48cb33a7b5796d4ba1f43c8a8193679.zh-cn/cfbea10c5ffb233ea9177d34726e6056e89913dc","_corruptedFile":"/home/lcy/.config/Code/clp/e48cb33a7b5796d4ba1f43c8a8193679.zh-cn/corrupted.info"}', 'FONTCONFIG_PATH': '/etc/fonts', 'GIO_MODULE_DIR': '/home/lcy/snap/code/common/.cache/gio-modules', 'STARSHIP_SHELL': 'bash', 'VSCODE_HANDLES_UNCAUGHT_ERRORS': 'true', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'DEBUG': 'release', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '0', 'SNAP_UID': '1000', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'CHROME_DESKTOP': 'code.desktop', 'CONDA_SHLVL': '0', 'HOME': '/home/lcy', 'SNAP_LIBRARY_PATH': '/var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32', 'DESKTOP_SESSION': 'ubuntu', 'GTK_PATH': '/snap/code/231/usr/lib/x86_64-linux-gnu/gtk-3.0', 'SNAP_USER_DATA': '/home/lcy/snap/code/231', 'GIO_LAUNCHED_DESKTOP_FILE': '/var/lib/snapd/desktop/applications/code_code.desktop', 'GTK_IM_MODULE_FILE': '/home/lcy/snap/code/common/.cache/immodules/immodules.cache', 'VSCODE_IPC_HOOK': '/run/user/1000/vscode-ed31b459-1.11-main.sock', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PAGER': 'cat', 'SDL_IM_MODULE': 'fcitx', 'ROS_PYTHON_VERSION': '3', 'COPILOT_OTEL_FILE_EXPORTER_PATH': '/dev/null', 'LC_CTYPE': 'C.UTF-8', 'LC_MONETARY': 'C.UTF-8', 'MANAGERPID': '3464', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'NO_COLOR': '1', 'SYSTEMD_EXEC_PID': '3934', 'COLORTERM': '', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '5234', 'SNAP_REVISION': '231', '_CONDA_ROOT': '/home/lcy/miniconda3', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'VSCODE_CRASH_REPORTER_PROCESS_TYPE': 'extensionHost', 'APPLICATION_INSIGHTS_NO_STATSBEAT': 'true', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'lcy', 'OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT': 'true', 'JOURNAL_STREAM': '9:15293', 'SNAP_CONTEXT': 'M6l33kKDnzxfuZ0-MZ-yseYQyCsE0236OQdgSeBhiE8-qTDNvrsR', '_': '/snap/code/231/usr/share/code/code', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'RUST_LOG': 'warn', 'SNAP_VERSION': 'cfbea10c', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/share/ubuntu:/usr/share/gnome:/home/lcy/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'XDG_SESSION_CLASS': 'user', 'ROS_VERSION': '2', 'TERM': 'dumb', 'USERNAME': 'lcy', 'FC_FONTATIONS': '1', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'SNAP_INSTANCE_NAME': 'code', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/home/lcy/.codex/tmp/arg0/codex-arg0M5Oupk:/home/lcy/.local/bin:/home/lcy/miniconda3/condabin:/home/lcy/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/lcy/.vscode/extensions/openai.chatgpt-26.325.31654-linux-x64/bin/linux-x86_64', 'GTK_EXE_PREFIX': '/snap/code/231/usr', 'INVOCATION_ID': '803a5e3b402b43afb010b52a82f20971', 'PAPERSIZE': 'a4', 'SESSION_MANAGER': 'local/lcy:@/tmp/.ICE-unix/3865,unix/lcy:/tmp/.ICE-unix/3865', 'GDK_BACKEND': 'x11', 'LC_ADDRESS': 'C.UTF-8', 'SNAP_DATA': '/var/snap/code/231', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'CODEX_SANDBOX_NETWORK_DISABLED': '1', 'DISPLAY': ':1', 'LOCPATH': '/snap/code/231/usr/lib/locale', 'LANG': 'C.UTF-8', 'LC_TELEPHONE': 'C.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'COPILOT_OTEL_ENABLED': 'true', 'GH_PAGER': 'cat', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'XDG_DATA_HOME': '/home/lcy/snap/code/231/.local/share', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XMODIFIERS': '@im=fcitx', 'CONDA_PYTHON_EXE': '/home/lcy/miniconda3/bin/python', 'GSETTINGS_SCHEMA_DIR': '/home/lcy/snap/code/231/.local/share/glib-2.0/schemas', 'SNAP_ARCH': 'amd64', 'SNAP_COOKIE': 'M6l33kKDnzxfuZ0-MZ-yseYQyCsE0236OQdgSeBhiE8-qTDNvrsR', 'SNAP_USER_COMMON': '/home/lcy/snap/code/common', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'GDK_PIXBUF_MODULEDIR': '/snap/code/231/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders', 'LC_NAME': 'C.UTF-8', 'SHELL': '/bin/bash', 'ELECTRON_RUN_AS_NODE': '1', 'GDMSESSION': 'ubuntu', 'QT_ACCESSIBILITY': '1', 'ROS_MASTER_URI': 'http://127.0.0.1:11311', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'SNAP_NAME': 'code', 'CODEX_THREAD_ID': '019d4c19-9c99-7a82-8038-11123a40b850', 'LC_MEASUREMENT': 'C.UTF-8', 'GDK_PIXBUF_MODULE_FILE': '/home/lcy/snap/code/common/.cache/gdk-pixbuf-loaders.cache', 'GJS_DEBUG_OUTPUT': 'stderr', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'C.UTF-8', '_CONDA_EXE': '/home/lcy/miniconda3/bin/conda', 'GIT_PAGER': 'cat', 'MINERU_API_TOKEN': 'eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFM1MTIifQ.eyJqdGkiOiI5MTYwMDIyNyIsInJvbCI6IlJPTEVfUkVHSVNURVIiLCJpc3MiOiJPcGVuWExhYiIsImlhdCI6MTc3MjY5NDA0MSwiY2xpZW50SWQiOiJsa3pkeDU3bnZ5MjJqa3BxOXgydyIsInBob25lIjoiIiwib3BlbklkIjpudWxsLCJ1dWlkIjoiOWVkY2ZhNjAtYjQ4MC00ZWRlLWJkMzUtMmM0MjhkZTEwOWY5IiwiZW1haWwiOiIiLCJleHAiOjE3ODA0NzAwNDF9.1MJitT-bhwskcLLZpzGXUH0Zr-s7r9xSxn4imD-6x7vE1EOfjEvh1QnuCsvt1pm20z09HKoP2GhViNp6gW-xiA', 'QT_IM_MODULE': 'fcitx', 'SNAP_LAUNCHER_ARCH_TRIPLET': 'x86_64-linux-gnu', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'LC_ALL': 'C.UTF-8', 'PWD': '/home/lcy/ros2_ws/build/only_robot_arm', 'VSCODE_CLI': '1', 'CLUTTER_IM_MODULE': 'xim', 'CONDA_EXE': '/home/lcy/miniconda3/bin/conda', 'SNAP_REAL_HOME': '/home/lcy', 'VSCODE_CODE_CACHE_PATH': '/home/lcy/.config/Code/CachedData/cfbea10c5ffb233ea9177d34726e6056e89913dc', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/home/lcy/snap/code/231/.local/share/flatpak/exports/share:/home/lcy/snap/code/231/.local/share:/home/lcy/snap/code/231:/snap/code/231/usr/share:/usr/share/ubuntu:/usr/share/gnome:/home/lcy/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'HTTP_PROXY': 'http://127.0.0.1:7890', 'LC_NUMERIC': 'C.UTF-8', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'ROS_HOSTNAME': '127.0.0.1', 'SNAP': '/snap/code/231', 'SNAP_EUID': '1000', 'STARSHIP_SESSION_KEY': '7456927248612891', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'LC_PAPER': 'C.UTF-8', 'COLCON': '1', 'ELECTRON_NO_ATTACH_CONSOLE': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'COPILOT_OTEL_EXPORTER_TYPE': 'file', 'VSCODE_PID': '5335', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.031384] (only_robot_arm) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.099351] (-) TimerEvent: {}
+[0.199280] (only_robot_arm) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.199468] (-) TimerEvent: {}
+[0.207578] (only_robot_arm) StdoutLine: {'line': b'-- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)\n'}
+[0.249798] (only_robot_arm) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[0.262897] (only_robot_arm) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[0.278650] (only_robot_arm) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.296600] (only_robot_arm) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.299574] (-) TimerEvent: {}
+[0.342531] (only_robot_arm) StdoutLine: {'line': b'-- Found moveit_msgs: 2.6.0 (/opt/ros/jazzy/share/moveit_msgs/cmake)\n'}
+[0.399704] (-) TimerEvent: {}
+[0.499896] (-) TimerEvent: {}
+[0.592701] (only_robot_arm) StdoutLine: {'line': b'-- Found moveit_ros_planning_interface: 2.12.4 (/opt/ros/jazzy/share/moveit_ros_planning_interface/cmake)\n'}
+[0.599993] (-) TimerEvent: {}
+[0.700148] (-) TimerEvent: {}
+[0.716781] (only_robot_arm) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: date_time filesystem program_options system thread \n'}
+[0.739533] (only_robot_arm) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread \n'}
+[0.800266] (-) TimerEvent: {}
+[0.803308] (only_robot_arm) StdoutLine: {'line': b'-- Found parameter_traits: 0.6.0 (/opt/ros/jazzy/share/parameter_traits/cmake)\n'}
+[0.855720] (only_robot_arm) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[0.859266] (only_robot_arm) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.900359] (-) TimerEvent: {}
+[0.952294] (only_robot_arm) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[0.972936] (only_robot_arm) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[0.996039] (only_robot_arm) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.000414] (-) TimerEvent: {}
+[1.084515] (only_robot_arm) StdoutLine: {'line': b'-- Found rclcpp_lifecycle: 28.1.16 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)\n'}
+[1.100516] (-) TimerEvent: {}
+[1.122717] (only_robot_arm) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: filesystem \n'}
+[1.188885] (only_robot_arm) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[1.189069] (only_robot_arm) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.200623] (-) TimerEvent: {}
+[1.300789] (-) TimerEvent: {}
+[1.348182] (only_robot_arm) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono \n'}
+[1.394366] (only_robot_arm) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread system filesystem regex date_time program_options \n'}
+[1.400893] (-) TimerEvent: {}
+[1.419522] (only_robot_arm) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread \n'}
+[1.500984] (-) TimerEvent: {}
+[1.539078] (only_robot_arm) StdoutLine: {'line': b'-- Configuring done (1.5s)\n'}
+[1.569213] (only_robot_arm) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[1.574095] (only_robot_arm) StdoutLine: {'line': b'-- Build files have been written to: /home/lcy/ros2_ws/build/only_robot_arm\n'}
+[1.601085] (-) TimerEvent: {}
+[1.618365] (only_robot_arm) StdoutLine: {'line': b'[ 50%] Building CXX object CMakeFiles/pollination_cycle_node.dir/src/pollination_cycle_node.cpp.o\n'}
+[1.701204] (-) TimerEvent: {}
+[1.801386] (-) TimerEvent: {}
+[1.901578] (-) TimerEvent: {}
+[2.001751] (-) TimerEvent: {}
+[2.101926] (-) TimerEvent: {}
+[2.202094] (-) TimerEvent: {}
+[2.302277] (-) TimerEvent: {}
+[2.402448] (-) TimerEvent: {}
+[2.502615] (-) TimerEvent: {}
+[2.602792] (-) TimerEvent: {}
+[2.702973] (-) TimerEvent: {}
+[2.803162] (-) TimerEvent: {}
+[2.903335] (-) TimerEvent: {}
+[3.003522] (-) TimerEvent: {}
+[3.103716] (-) TimerEvent: {}
+[3.203889] (-) TimerEvent: {}
+[3.215357] (only_robot_arm) StderrLine: {'line': b'In file included from /home/lcy/ros2_ws/src/only_robot_arm/src/pollination_cycle_node.cpp:20:\n'}
+[3.215579] (only_robot_arm) StderrLine: {'line': b'/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77: note: \xe2\x80\x98#pragma message: .h header is obsolete. Please use the .hpp header instead.\xe2\x80\x99\n'}
+[3.215674] (only_robot_arm) StderrLine: {'line': b'   51 | #pragma message(".h header is obsolete. Please use the .hpp header instead.")\n'}
+[3.215748] (only_robot_arm) StderrLine: {'line': b'      |                                                                             ^\n'}
+[3.303979] (-) TimerEvent: {}
+[3.404168] (-) TimerEvent: {}
+[3.504342] (-) TimerEvent: {}
+[3.604529] (-) TimerEvent: {}
+[3.704724] (-) TimerEvent: {}
+[3.804888] (-) TimerEvent: {}
+[3.905069] (-) TimerEvent: {}
+[4.005250] (-) TimerEvent: {}
+[4.105438] (-) TimerEvent: {}
+[4.205627] (-) TimerEvent: {}
+[4.305809] (-) TimerEvent: {}
+[4.405998] (-) TimerEvent: {}
+[4.506196] (-) TimerEvent: {}
+[4.606398] (-) TimerEvent: {}
+[4.706608] (-) TimerEvent: {}
+[4.806790] (-) TimerEvent: {}
+[4.906953] (-) TimerEvent: {}
+[5.007129] (-) TimerEvent: {}
+[5.107311] (-) TimerEvent: {}
+[5.207500] (-) TimerEvent: {}
+[5.307684] (-) TimerEvent: {}
+[5.407868] (-) TimerEvent: {}
+[5.508052] (-) TimerEvent: {}
+[5.582266] (only_robot_arm) StderrLine: {'line': b'In file included from /home/lcy/ros2_ws/src/only_robot_arm/src/pollination_cycle_node.cpp:21:\n'}
+[5.582542] (only_robot_arm) StderrLine: {'line': b'/opt/ros/jazzy/include/moveit_core/moveit/robot_state/conversions.h:50:77: note: \xe2\x80\x98#pragma message: .h header is obsolete. Please use the .hpp header instead.\xe2\x80\x99\n'}
+[5.582637] (only_robot_arm) StderrLine: {'line': b'   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead.")\n'}
+[5.582730] (only_robot_arm) StderrLine: {'line': b'      |                                                                             ^\n'}
+[5.608169] (-) TimerEvent: {}
+[5.708360] (-) TimerEvent: {}
+[5.738407] (only_robot_arm) StderrLine: {'line': b'/home/lcy/ros2_ws/src/only_robot_arm/src/pollination_cycle_node.cpp: In member function \xe2\x80\x98bool PollinationCycleNode::computeIkJointTarget(const geometry_msgs::msg::PoseStamped&, std::map<std::__cxx11::basic_string<char>, double>&)\xe2\x80\x99:\n'}
+[5.738624] (only_robot_arm) StderrLine: {'line': b'/home/lcy/ros2_ws/src/only_robot_arm/src/pollination_cycle_node.cpp:337:79: error: \xe2\x80\x98class rclcpp::Duration\xe2\x80\x99 has no member named \xe2\x80\x98to_builtin_msg\xe2\x80\x99\n'}
+[5.738715] (only_robot_arm) StderrLine: {'line': b'  337 |     req->ik_request.timeout = rclcpp::Duration::from_seconds(ik_timeout_sec_).to_builtin_msg();\n'}
+[5.738799] (only_robot_arm) StderrLine: {'line': b'      |                                                                               ^~~~~~~~~~~~~~\n'}
+[5.738869] (only_robot_arm) StderrLine: {'line': b'/home/lcy/ros2_ws/src/only_robot_arm/src/pollination_cycle_node.cpp:338:21: error: \xe2\x80\x98using moveit_msgs::srv::GetPositionIK_Request_<std::allocator<void> >::_ik_request_type = struct moveit_msgs::msg::PositionIKRequest_<std::allocator<void> >\xe2\x80\x99 {aka \xe2\x80\x98struct moveit_msgs::msg::PositionIKRequest_<std::allocator<void> >\xe2\x80\x99} has no member named \xe2\x80\x98attempts\xe2\x80\x99\n'}
+[5.738944] (only_robot_arm) StderrLine: {'line': b'  338 |     req->ik_request.attempts = 8;\n'}
+[5.739018] (only_robot_arm) StderrLine: {'line': b'      |                     ^~~~~~~~\n'}
+[5.744782] (only_robot_arm) StderrLine: {'line': b'/home/lcy/ros2_ws/src/only_robot_arm/src/pollination_cycle_node.cpp: In member function \xe2\x80\x98bool PollinationCycleNode::simulatePlan(const moveit::planning_interface::MoveGroupInterface::Plan&)\xe2\x80\x99:\n'}
+[5.744900] (only_robot_arm) StderrLine: {'line': b'/home/lcy/ros2_ws/src/only_robot_arm/src/pollination_cycle_node.cpp:407:28: error: \xe2\x80\x98const struct moveit::planning_interface::MoveGroupInterface::Plan\xe2\x80\x99 has no member named \xe2\x80\x98trajectory_\xe2\x80\x99; did you mean \xe2\x80\x98trajectory\xe2\x80\x99?\n'}
+[5.744987] (only_robot_arm) StderrLine: {'line': b'  407 |     const auto & jt = plan.trajectory_.joint_trajectory;\n'}
+[5.745059] (only_robot_arm) StderrLine: {'line': b'      |                            ^~~~~~~~~~~\n'}
+[5.745124] (only_robot_arm) StderrLine: {'line': b'      |                            trajectory\n'}
+[5.808433] (-) TimerEvent: {}
+[5.908597] (-) TimerEvent: {}
+[6.008783] (-) TimerEvent: {}
+[6.108963] (-) TimerEvent: {}
+[6.209143] (-) TimerEvent: {}
+[6.309315] (-) TimerEvent: {}
+[6.409492] (-) TimerEvent: {}
+[6.509657] (-) TimerEvent: {}
+[6.609837] (-) TimerEvent: {}
+[6.710036] (-) TimerEvent: {}
+[6.810223] (-) TimerEvent: {}
+[6.910429] (-) TimerEvent: {}
+[7.010632] (-) TimerEvent: {}
+[7.110819] (-) TimerEvent: {}
+[7.211007] (-) TimerEvent: {}
+[7.311200] (-) TimerEvent: {}
+[7.411462] (-) TimerEvent: {}
+[7.511649] (-) TimerEvent: {}
+[7.611842] (-) TimerEvent: {}
+[7.712026] (-) TimerEvent: {}
+[7.812213] (-) TimerEvent: {}
+[7.912392] (-) TimerEvent: {}
+[8.012566] (-) TimerEvent: {}
+[8.112751] (-) TimerEvent: {}
+[8.212942] (-) TimerEvent: {}
+[8.313130] (-) TimerEvent: {}
+[8.413310] (-) TimerEvent: {}
+[8.513452] (-) TimerEvent: {}
+[8.613632] (-) TimerEvent: {}
+[8.713833] (-) TimerEvent: {}
+[8.814050] (-) TimerEvent: {}
+[8.914260] (-) TimerEvent: {}
+[9.014483] (-) TimerEvent: {}
+[9.114652] (-) TimerEvent: {}
+[9.214812] (-) TimerEvent: {}
+[9.314998] (-) TimerEvent: {}
+[9.415167] (-) TimerEvent: {}
+[9.515336] (-) TimerEvent: {}
+[9.615509] (-) TimerEvent: {}
+[9.715663] (-) TimerEvent: {}
+[9.815849] (-) TimerEvent: {}
+[9.916053] (-) TimerEvent: {}
+[10.016263] (-) TimerEvent: {}
+[10.116425] (-) TimerEvent: {}
+[10.216577] (-) TimerEvent: {}
+[10.316733] (-) TimerEvent: {}
+[10.416896] (-) TimerEvent: {}
+[10.517084] (-) TimerEvent: {}
+[10.617254] (-) TimerEvent: {}
+[10.717438] (-) TimerEvent: {}
+[10.817610] (-) TimerEvent: {}
+[10.917823] (-) TimerEvent: {}
+[11.018047] (-) TimerEvent: {}
+[11.118231] (-) TimerEvent: {}
+[11.218406] (-) TimerEvent: {}
+[11.290213] (only_robot_arm) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/pollination_cycle_node.dir/build.make:76: CMakeFiles/pollination_cycle_node.dir/src/pollination_cycle_node.cpp.o] Error 1\n'}
+[11.290458] (only_robot_arm) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pollination_cycle_node.dir/all] Error 2\n'}
+[11.290655] (only_robot_arm) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[11.292793] (only_robot_arm) CommandEnded: {'returncode': 2}
+[11.302293] (only_robot_arm) JobEnded: {'identifier': 'only_robot_arm', 'rc': 2}
+[11.312711] (only_robot_arm_moveit_config) JobSkipped: {'identifier': 'only_robot_arm_moveit_config'}
+[11.312756] (-) EventReactorShutdown: {}

@@ -1,0 +1,170 @@
+import math
+import os
+import yaml
+
+from ament_index_python.packages import get_package_share_directory
+from launch import LaunchDescription
+from launch.actions import DeclareLaunchArgument
+from launch.conditions import IfCondition
+from launch.substitutions import LaunchConfiguration
+from launch_ros.actions import Node
+from moveit_configs_utils import MoveItConfigsBuilder
+
+
+def _normalize_for_parameters(value):
+    if isinstance(value, dict):
+        return {k: _normalize_for_parameters(v) for k, v in value.items()}
+    if isinstance(value, tuple):
+        return [_normalize_for_parameters(v) for v in value]
+    if isinstance(value, list):
+        return [_normalize_for_parameters(v) for v in value]
+    return value
+
+
+def generate_launch_description():
+    arm_pkg = get_package_share_directory("only_robot_arm")
+    moveit_pkg = get_package_share_directory("only_robot_arm_moveit_config")
+    urdf_path = os.path.join(arm_pkg, "urdf", "only_robot_arm.urdf")
+    rviz_path = os.path.join(moveit_pkg, "launch", "moveit.rviz")
+    initial_positions_path = os.path.join(moveit_pkg, "config", "initial_positions.yaml")
+
+    contracted_joint_names = []
+    contracted_joint_values = []
+    if os.path.exists(initial_positions_path):
+        with open(initial_positions_path, "r", encoding="utf-8") as f:
+            initial_positions_data = yaml.safe_load(f) or {}
+        contracted_map = initial_positions_data.get("initial_positions", {})
+        contracted_joint_names = list(contracted_map.keys())
+        contracted_joint_values = [float(contracted_map[name]) for name in contracted_joint_names]
+
+    moveit_config = (
+        MoveItConfigsBuilder("only_robot_arm", package_name="only_robot_arm_moveit_config")
+        .robot_description(file_path=urdf_path)
+        .robot_description_semantic(file_path="config/only_robot_arm.srdf")
+        .robot_description_kinematics(file_path="config/kinematics.yaml")
+        .joint_limits(file_path="config/joint_limits.yaml")
+        .trajectory_execution(file_path="config/moveit_controllers.yaml")
+        .planning_pipelines(pipelines=["ompl"])
+        .planning_scene_monitor(
+            publish_robot_description=True,
+            publish_robot_description_semantic=True,
+        )
+        .to_moveit_configs()
+    )
+
+    use_rviz_arg = DeclareLaunchArgument("use_rviz", default_value="true")
+    run_cycle_arg = DeclareLaunchArgument("run_cycle", default_value="true")
+    dx_world_arg = DeclareLaunchArgument("dx_world", default_value="0.1")
+    dy_world_arg = DeclareLaunchArgument("dy_world", default_value="-0.8")
+    flower_z_arg = DeclareLaunchArgument("flower_center_z", default_value="0.1")
+    base_cw_arg = DeclareLaunchArgument(
+        "base_clockwise_delta_rad",
+        default_value=str(-math.pi / 2.0),
+        description="Clockwise rotation around joint_1 axis before approaching flower.",
+    )
+
+    static_tf = Node(
+        package="tf2_ros",
+        executable="static_transform_publisher",
+        name="world_to_base",
+        arguments=["0", "0", "0.89", "0", "0", str(math.pi), "world", "base_link"],
+        output="screen",
+    )
+
+    robot_state_publisher = Node(
+        package="robot_state_publisher",
+        executable="robot_state_publisher",
+        output="screen",
+        parameters=[moveit_config.robot_description],
+    )
+
+    marker_node = Node(
+        package="only_robot_arm",
+        executable="watermelon_flower_marker.py",
+        name="watermelon_flower_marker",
+        output="screen",
+        parameters=[
+            {
+                "world_frame": "world",
+                "anchor_frame": "link_1",
+                "dx_world": LaunchConfiguration("dx_world"),
+                "dy_world": LaunchConfiguration("dy_world"),
+                "flower_center_z": LaunchConfiguration("flower_center_z"),
+            }
+        ],
+    )
+
+    move_group_node = Node(
+        package="moveit_ros_move_group",
+        executable="move_group",
+        output="screen",
+        remappings=[("joint_states", "/joint_states")],
+        parameters=[
+            _normalize_for_parameters(moveit_config.to_dict()),
+            {
+                "allow_trajectory_execution": False,
+                "moveit_manage_controllers": False,
+                "publish_planning_scene": True,
+                "publish_geometry_updates": True,
+                "publish_state_updates": True,
+                "publish_transforms_updates": True,
+            },
+        ],
+    )
+
+    rviz_node = Node(
+        package="rviz2",
+        executable="rviz2",
+        name="rviz2",
+        output="log",
+        arguments=["-d", rviz_path],
+        parameters=[
+            moveit_config.robot_description,
+            moveit_config.robot_description_semantic,
+            moveit_config.planning_pipelines,
+            moveit_config.robot_description_kinematics,
+            moveit_config.joint_limits,
+        ],
+        condition=IfCondition(LaunchConfiguration("use_rviz")),
+    )
+
+    pollination_cycle_node = Node(
+        package="only_robot_arm",
+        executable="pollination_cycle_node",
+        name="pollination_cycle_node",
+        output="screen",
+        remappings=[("joint_states", "/joint_states")],
+        parameters=[
+            {
+                "world_frame": "world",
+                "anchor_frame": "link_1",
+                "tip_frame": "pollination_tip_link",
+                "joint6_frame": "link_6",
+                "planning_group": "arm",
+                "dx_world": LaunchConfiguration("dx_world"),
+                "dy_world": LaunchConfiguration("dy_world"),
+                "flower_center_z": LaunchConfiguration("flower_center_z"),
+                "base_clockwise_delta_rad": LaunchConfiguration("base_clockwise_delta_rad"),
+                "contracted_joint_names": contracted_joint_names,
+                "contracted_joint_values": contracted_joint_values,
+            }
+        ],
+        condition=IfCondition(LaunchConfiguration("run_cycle")),
+    )
+
+    return LaunchDescription(
+        [
+            use_rviz_arg,
+            run_cycle_arg,
+            dx_world_arg,
+            dy_world_arg,
+            flower_z_arg,
+            base_cw_arg,
+            static_tf,
+            robot_state_publisher,
+            marker_node,
+            move_group_node,
+            rviz_node,
+            pollination_cycle_node,
+        ]
+    )

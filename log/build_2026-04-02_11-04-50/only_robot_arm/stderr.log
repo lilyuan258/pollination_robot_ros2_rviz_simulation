@@ -1,0 +1,23 @@
+In file included from /home/lcy/ros2_ws/src/only_robot_arm/src/pollination_cycle_node.cpp:20:
+/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77: note: ‘#pragma message: .h header is obsolete. Please use the .hpp header instead.’
+   51 | #pragma message(".h header is obsolete. Please use the .hpp header instead.")
+      |                                                                             ^
+In file included from /home/lcy/ros2_ws/src/only_robot_arm/src/pollination_cycle_node.cpp:21:
+/opt/ros/jazzy/include/moveit_core/moveit/robot_state/conversions.h:50:77: note: ‘#pragma message: .h header is obsolete. Please use the .hpp header instead.’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead.")
+      |                                                                             ^
+/home/lcy/ros2_ws/src/only_robot_arm/src/pollination_cycle_node.cpp: In member function ‘bool PollinationCycleNode::computeIkJointTarget(const geometry_msgs::msg::PoseStamped&, std::map<std::__cxx11::basic_string<char>, double>&)’:
+/home/lcy/ros2_ws/src/only_robot_arm/src/pollination_cycle_node.cpp:337:79: error: ‘class rclcpp::Duration’ has no member named ‘to_builtin_msg’
+  337 |     req->ik_request.timeout = rclcpp::Duration::from_seconds(ik_timeout_sec_).to_builtin_msg();
+      |                                                                               ^~~~~~~~~~~~~~
+/home/lcy/ros2_ws/src/only_robot_arm/src/pollination_cycle_node.cpp:338:21: error: ‘using moveit_msgs::srv::GetPositionIK_Request_<std::allocator<void> >::_ik_request_type = struct moveit_msgs::msg::PositionIKRequest_<std::allocator<void> >’ {aka ‘struct moveit_msgs::msg::PositionIKRequest_<std::allocator<void> >’} has no member named ‘attempts’
+  338 |     req->ik_request.attempts = 8;
+      |                     ^~~~~~~~
+/home/lcy/ros2_ws/src/only_robot_arm/src/pollination_cycle_node.cpp: In member function ‘bool PollinationCycleNode::simulatePlan(const moveit::planning_interface::MoveGroupInterface::Plan&)’:
+/home/lcy/ros2_ws/src/only_robot_arm/src/pollination_cycle_node.cpp:407:28: error: ‘const struct moveit::planning_interface::MoveGroupInterface::Plan’ has no member named ‘trajectory_’; did you mean ‘trajectory’?
+  407 |     const auto & jt = plan.trajectory_.joint_trajectory;
+      |                            ^~~~~~~~~~~
+      |                            trajectory
+gmake[2]: *** [CMakeFiles/pollination_cycle_node.dir/build.make:76: CMakeFiles/pollination_cycle_node.dir/src/pollination_cycle_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pollination_cycle_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
