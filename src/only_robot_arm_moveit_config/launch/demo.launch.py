@@ -4,10 +4,11 @@ import yaml
 
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument
+from launch.actions import DeclareLaunchArgument, OpaqueFunction, SetLaunchConfiguration
 from launch.conditions import IfCondition
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
+from launch_ros.parameter_descriptions import ParameterValue
 from moveit_configs_utils import MoveItConfigsBuilder
 
 
@@ -19,6 +20,25 @@ def _normalize_for_parameters(value):
     if isinstance(value, list):
         return [_normalize_for_parameters(v) for v in value]
     return value
+
+
+def _resolve_base_cw(context, *args, **kwargs):
+    base_cw = LaunchConfiguration("base_clockwise_delta_rad").perform(context)
+
+    # 用户如果显式传了，就尊重用户输入
+    if base_cw != "":
+        return []
+
+    dy_world = float(LaunchConfiguration("dy_world").perform(context))
+
+    if dy_world < 0.0:
+        value = str(-math.pi / 2.0)
+    elif dy_world > 0.0:
+        value = str(math.pi / 2.0)
+    else:
+        value = "0.0"
+
+    return [SetLaunchConfiguration("base_clockwise_delta_rad", value)]
 
 
 def generate_launch_description():
@@ -58,11 +78,14 @@ def generate_launch_description():
     dx_world_arg = DeclareLaunchArgument("dx_world", default_value="0.1")
     dy_world_arg = DeclareLaunchArgument("dy_world", default_value="-0.8")
     flower_z_arg = DeclareLaunchArgument("flower_center_z", default_value="0.1")
+
     base_cw_arg = DeclareLaunchArgument(
         "base_clockwise_delta_rad",
-        default_value=str(-math.pi / 2.0),
-        description="Clockwise rotation around joint_1 axis before approaching flower.",
+        default_value="",
+        description="Override clockwise rotation around joint_1 axis. Leave empty to auto-derive from dy_world.",
     )
+
+    resolve_base_cw = OpaqueFunction(function=_resolve_base_cw)
 
     static_tf = Node(
         package="tf2_ros",
@@ -88,9 +111,9 @@ def generate_launch_description():
             {
                 "world_frame": "world",
                 "anchor_frame": "link_1",
-                "dx_world": LaunchConfiguration("dx_world"),
-                "dy_world": LaunchConfiguration("dy_world"),
-                "flower_center_z": LaunchConfiguration("flower_center_z"),
+                "dx_world": ParameterValue(LaunchConfiguration("dx_world"), value_type=float),
+                "dy_world": ParameterValue(LaunchConfiguration("dy_world"), value_type=float),
+                "flower_center_z": ParameterValue(LaunchConfiguration("flower_center_z"), value_type=float),
             }
         ],
     )
@@ -150,10 +173,12 @@ def generate_launch_description():
                 "tip_frame": "pollination_tip_link",
                 "joint6_frame": "link_6",
                 "planning_group": "arm",
-                "dx_world": LaunchConfiguration("dx_world"),
-                "dy_world": LaunchConfiguration("dy_world"),
-                "flower_center_z": LaunchConfiguration("flower_center_z"),
-                "base_clockwise_delta_rad": LaunchConfiguration("base_clockwise_delta_rad"),
+                "dx_world": ParameterValue(LaunchConfiguration("dx_world"), value_type=float),
+                "dy_world": ParameterValue(LaunchConfiguration("dy_world"), value_type=float),
+                "flower_center_z": ParameterValue(LaunchConfiguration("flower_center_z"), value_type=float),
+                "base_clockwise_delta_rad": ParameterValue(
+                    LaunchConfiguration("base_clockwise_delta_rad"), value_type=float
+                ),
                 "contracted_joint_names": contracted_joint_names,
                 "contracted_joint_values": contracted_joint_values,
             }
@@ -169,6 +194,7 @@ def generate_launch_description():
             dy_world_arg,
             flower_z_arg,
             base_cw_arg,
+            resolve_base_cw,
             static_tf,
             robot_state_publisher,
             marker_node,

@@ -87,7 +87,7 @@ public:
     dy_world_ = this->declare_parameter<double>("dy_world", -0.8);
     flower_center_z_ = this->declare_parameter<double>("flower_center_z", 0.1);
 
-    pollination_offset_m_ = this->declare_parameter<double>("pollination_offset_m", 0.05);
+    pollination_offset_m_ = this->declare_parameter<double>("pollination_offset_m", 0.10);
     pre_pollination_offset_m_ = this->declare_parameter<double>("pre_pollination_offset_m", 0.12);
     dwell_sec_ = this->declare_parameter<double>("dwell_sec", 0.8);
     loop_pause_sec_ = this->declare_parameter<double>("loop_pause_sec", 0.6);
