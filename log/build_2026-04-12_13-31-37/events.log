@@ -1,0 +1,284 @@
+[0.000000] (-) TimerEvent: {}
+[0.000264] (-) JobUnselected: {'identifier': 'environment'}
+[0.000314] (only_robot_arm) JobQueued: {'identifier': 'only_robot_arm', 'dependencies': OrderedDict()}
+[0.000357] (only_robot_arm_moveit_config) JobQueued: {'identifier': 'only_robot_arm_moveit_config', 'dependencies': OrderedDict({'only_robot_arm': '/home/lcy/ros2_ws/install/only_robot_arm'})}
+[0.000409] (only_robot_arm) JobStarted: {'identifier': 'only_robot_arm'}
+[0.006771] (only_robot_arm) JobProgress: {'identifier': 'only_robot_arm', 'progress': 'cmake'}
+[0.007260] (only_robot_arm) JobProgress: {'identifier': 'only_robot_arm', 'progress': 'build'}
+[0.007703] (only_robot_arm) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/lcy/ros2_ws/build/only_robot_arm', '--', '-j16', '-l16'], 'cwd': '/home/lcy/ros2_ws/build/only_robot_arm', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'BLE_SESSION_ID': '1775969849.598799/208962', 'HTTPS_PROXY': 'http://127.0.0.1:7890/', 'no_proxy': 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1', 'LANGUAGE': 'zh_CN:en', 'USER': 'lcy', 'LC_TIME': 'C.UTF-8', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'STARSHIP_SHELL': 'bash', 'all_proxy': 'socks://127.0.0.1:7890/', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/lcy', 'CONDA_SHLVL': '0', 'OLDPWD': '/home/lcy/ros2_ws', 'DESKTOP_SESSION': 'ubuntu', 'NO_PROXY': 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SDL_IM_MODULE': 'fcitx', 'LC_MONETARY': 'C.UTF-8', 'SYSTEMD_EXEC_PID': '4054', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', '_CONDA_ROOT': '/home/lcy/miniconda3', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'https_proxy': 'http://127.0.0.1:7890/', 'COLCON_PREFIX_PATH': '/home/lcy/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'lcy', 'ALL_PROXY': 'socks://127.0.0.1:7890/', 'http_proxy': 'http://127.0.0.1:7890/', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'lcy', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/home/lcy/miniconda3/condabin:/home/lcy/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/lcy:@/tmp/.ICE-unix/3915,unix/lcy:/tmp/.ICE-unix/3915', '_ble_util_fdlist_cloexec': '', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'C.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/88e75c22_2b2e_4e35_ac12_ea619804054e', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'C.UTF-8', 'XMODIFIERS': '@im=fcitx', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.193', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/lcy/ros2_ws/install/only_robot_arm_moveit_config:/home/lcy/ros2_ws/install/only_robot_arm:/home/lcy/ros2_ws/install/environment:/opt/ros/jazzy', 'CONDA_PYTHON_EXE': '/home/lcy/miniconda3/bin/python', 'SHELL': '/bin/bash', 'LC_NAME': 'C.UTF-8', 'QT_ACCESSIBILITY': '1', 'ROS_MASTER_URI': 'http://127.0.0.1:11311', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'C.UTF-8', 'LINENO': '19', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', '_CONDA_EXE': '/home/lcy/miniconda3/bin/conda', 'LC_IDENTIFICATION': 'C.UTF-8', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'bleopt_connect_tty': '1', 'QT_IM_MODULE': 'fcitx', 'MINERU_API_TOKEN': 'eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFM1MTIifQ.eyJqdGkiOiI5MTYwMDIyNyIsInJvbCI6IlJPTEVfUkVHSVNURVIiLCJpc3MiOiJPcGVuWExhYiIsImlhdCI6MTc3MjY5NDA0MSwiY2xpZW50SWQiOiJsa3pkeDU3bnZ5MjJqa3BxOXgydyIsInBob25lIjoiIiwib3BlbklkIjpudWxsLCJ1dWlkIjoiOWVkY2ZhNjAtYjQ4MC00ZWRlLWJkMzUtMmM0MjhkZTEwOWY5IiwiZW1haWwiOiIiLCJleHAiOjE3ODA0NzAwNDF9.1MJitT-bhwskcLLZpzGXUH0Zr-s7r9xSxn4imD-6x7vE1EOfjEvh1QnuCsvt1pm20z09HKoP2GhViNp6gW-xiA', 'PWD': '/home/lcy/ros2_ws/build/only_robot_arm', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CONDA_EXE': '/home/lcy/miniconda3/bin/conda', 'CLUTTER_IM_MODULE': 'xim', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/home/lcy/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', '_ble_util_fdvars_export': '', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'STARSHIP_SESSION_KEY': '2031273853573396', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'HTTP_PROXY': 'http://127.0.0.1:7890/', 'ROS_HOSTNAME': '127.0.0.1', 'LC_NUMERIC': 'C.UTF-8', 'LC_PAPER': 'C.UTF-8', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/lcy/ros2_ws/install/only_robot_arm_moveit_config:/home/lcy/ros2_ws/install/only_robot_arm:/home/lcy/ros2_ws/install/environment:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.085763] (only_robot_arm) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/pollination_cycle_node.dir/src/pollination_cycle_node.cpp.o\x1b[0m\n'}
+[0.099350] (-) TimerEvent: {}
+[0.199626] (-) TimerEvent: {}
+[0.299899] (-) TimerEvent: {}
+[0.400147] (-) TimerEvent: {}
+[0.500391] (-) TimerEvent: {}
+[0.600653] (-) TimerEvent: {}
+[0.700916] (-) TimerEvent: {}
+[0.801174] (-) TimerEvent: {}
+[0.901436] (-) TimerEvent: {}
+[1.001708] (-) TimerEvent: {}
+[1.101993] (-) TimerEvent: {}
+[1.202258] (-) TimerEvent: {}
+[1.302528] (-) TimerEvent: {}
+[1.402786] (-) TimerEvent: {}
+[1.503064] (-) TimerEvent: {}
+[1.603339] (-) TimerEvent: {}
+[1.703635] (-) TimerEvent: {}
+[1.803910] (-) TimerEvent: {}
+[1.904194] (-) TimerEvent: {}
+[2.004450] (-) TimerEvent: {}
+[2.104721] (-) TimerEvent: {}
+[2.204972] (-) TimerEvent: {}
+[2.305222] (-) TimerEvent: {}
+[2.405435] (-) TimerEvent: {}
+[2.505705] (-) TimerEvent: {}
+[2.605967] (-) TimerEvent: {}
+[2.706250] (-) TimerEvent: {}
+[2.806578] (-) TimerEvent: {}
+[2.906823] (-) TimerEvent: {}
+[3.007094] (-) TimerEvent: {}
+[3.107373] (-) TimerEvent: {}
+[3.207641] (-) TimerEvent: {}
+[3.307902] (-) TimerEvent: {}
+[3.408169] (-) TimerEvent: {}
+[3.508430] (-) TimerEvent: {}
+[3.608676] (-) TimerEvent: {}
+[3.708949] (-) TimerEvent: {}
+[3.809225] (-) TimerEvent: {}
+[3.909496] (-) TimerEvent: {}
+[4.009765] (-) TimerEvent: {}
+[4.110019] (-) TimerEvent: {}
+[4.210250] (-) TimerEvent: {}
+[4.310438] (-) TimerEvent: {}
+[4.410694] (-) TimerEvent: {}
+[4.510949] (-) TimerEvent: {}
+[4.611205] (-) TimerEvent: {}
+[4.711448] (-) TimerEvent: {}
+[4.811740] (-) TimerEvent: {}
+[4.912017] (-) TimerEvent: {}
+[5.012290] (-) TimerEvent: {}
+[5.112580] (-) TimerEvent: {}
+[5.212840] (-) TimerEvent: {}
+[5.313095] (-) TimerEvent: {}
+[5.413349] (-) TimerEvent: {}
+[5.513627] (-) TimerEvent: {}
+[5.613880] (-) TimerEvent: {}
+[5.714156] (-) TimerEvent: {}
+[5.814434] (-) TimerEvent: {}
+[5.914685] (-) TimerEvent: {}
+[6.014933] (-) TimerEvent: {}
+[6.115218] (-) TimerEvent: {}
+[6.215523] (-) TimerEvent: {}
+[6.315814] (-) TimerEvent: {}
+[6.416087] (-) TimerEvent: {}
+[6.516336] (-) TimerEvent: {}
+[6.616601] (-) TimerEvent: {}
+[6.716914] (-) TimerEvent: {}
+[6.817254] (-) TimerEvent: {}
+[6.917510] (-) TimerEvent: {}
+[7.017767] (-) TimerEvent: {}
+[7.118026] (-) TimerEvent: {}
+[7.218307] (-) TimerEvent: {}
+[7.318597] (-) TimerEvent: {}
+[7.418850] (-) TimerEvent: {}
+[7.519080] (-) TimerEvent: {}
+[7.619327] (-) TimerEvent: {}
+[7.719600] (-) TimerEvent: {}
+[7.819858] (-) TimerEvent: {}
+[7.920129] (-) TimerEvent: {}
+[8.020394] (-) TimerEvent: {}
+[8.120655] (-) TimerEvent: {}
+[8.220922] (-) TimerEvent: {}
+[8.321203] (-) TimerEvent: {}
+[8.421427] (-) TimerEvent: {}
+[8.521653] (-) TimerEvent: {}
+[8.621924] (-) TimerEvent: {}
+[8.722182] (-) TimerEvent: {}
+[8.822457] (-) TimerEvent: {}
+[8.922714] (-) TimerEvent: {}
+[9.022972] (-) TimerEvent: {}
+[9.123223] (-) TimerEvent: {}
+[9.223438] (-) TimerEvent: {}
+[9.323722] (-) TimerEvent: {}
+[9.423998] (-) TimerEvent: {}
+[9.524293] (-) TimerEvent: {}
+[9.624595] (-) TimerEvent: {}
+[9.724911] (-) TimerEvent: {}
+[9.825191] (-) TimerEvent: {}
+[9.925430] (-) TimerEvent: {}
+[10.025683] (-) TimerEvent: {}
+[10.125954] (-) TimerEvent: {}
+[10.226206] (-) TimerEvent: {}
+[10.326507] (-) TimerEvent: {}
+[10.426775] (-) TimerEvent: {}
+[10.527014] (-) TimerEvent: {}
+[10.627282] (-) TimerEvent: {}
+[10.727544] (-) TimerEvent: {}
+[10.827783] (-) TimerEvent: {}
+[10.928039] (-) TimerEvent: {}
+[11.028321] (-) TimerEvent: {}
+[11.128598] (-) TimerEvent: {}
+[11.228889] (-) TimerEvent: {}
+[11.329132] (-) TimerEvent: {}
+[11.429417] (-) TimerEvent: {}
+[11.529657] (-) TimerEvent: {}
+[11.629936] (-) TimerEvent: {}
+[11.730979] (-) TimerEvent: {}
+[11.831324] (-) TimerEvent: {}
+[11.931585] (-) TimerEvent: {}
+[12.031805] (-) TimerEvent: {}
+[12.132050] (-) TimerEvent: {}
+[12.232317] (-) TimerEvent: {}
+[12.332593] (-) TimerEvent: {}
+[12.432836] (-) TimerEvent: {}
+[12.533084] (-) TimerEvent: {}
+[12.633412] (-) TimerEvent: {}
+[12.733687] (-) TimerEvent: {}
+[12.833956] (-) TimerEvent: {}
+[12.934212] (-) TimerEvent: {}
+[13.034482] (-) TimerEvent: {}
+[13.134750] (-) TimerEvent: {}
+[13.235005] (-) TimerEvent: {}
+[13.335267] (-) TimerEvent: {}
+[13.435555] (-) TimerEvent: {}
+[13.535838] (-) TimerEvent: {}
+[13.636161] (-) TimerEvent: {}
+[13.736444] (-) TimerEvent: {}
+[13.836667] (-) TimerEvent: {}
+[13.936895] (-) TimerEvent: {}
+[14.037159] (-) TimerEvent: {}
+[14.137478] (-) TimerEvent: {}
+[14.237814] (-) TimerEvent: {}
+[14.338034] (-) TimerEvent: {}
+[14.438259] (-) TimerEvent: {}
+[14.538583] (-) TimerEvent: {}
+[14.638906] (-) TimerEvent: {}
+[14.739151] (-) TimerEvent: {}
+[14.839424] (-) TimerEvent: {}
+[14.939662] (-) TimerEvent: {}
+[15.039914] (-) TimerEvent: {}
+[15.140140] (-) TimerEvent: {}
+[15.240402] (-) TimerEvent: {}
+[15.340676] (-) TimerEvent: {}
+[15.440913] (-) TimerEvent: {}
+[15.541198] (-) TimerEvent: {}
+[15.642318] (-) TimerEvent: {}
+[15.742573] (-) TimerEvent: {}
+[15.842854] (-) TimerEvent: {}
+[15.943248] (-) TimerEvent: {}
+[16.043495] (-) TimerEvent: {}
+[16.143747] (-) TimerEvent: {}
+[16.244014] (-) TimerEvent: {}
+[16.344266] (-) TimerEvent: {}
+[16.444563] (-) TimerEvent: {}
+[16.544823] (-) TimerEvent: {}
+[16.645078] (-) TimerEvent: {}
+[16.745425] (-) TimerEvent: {}
+[16.845705] (-) TimerEvent: {}
+[16.945992] (-) TimerEvent: {}
+[17.046237] (-) TimerEvent: {}
+[17.146443] (-) TimerEvent: {}
+[17.246720] (-) TimerEvent: {}
+[17.346984] (-) TimerEvent: {}
+[17.447270] (-) TimerEvent: {}
+[17.547543] (-) TimerEvent: {}
+[17.647777] (-) TimerEvent: {}
+[17.748002] (-) TimerEvent: {}
+[17.848225] (-) TimerEvent: {}
+[17.948516] (-) TimerEvent: {}
+[18.048802] (-) TimerEvent: {}
+[18.149055] (-) TimerEvent: {}
+[18.249305] (-) TimerEvent: {}
+[18.268021] (only_robot_arm) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable pollination_cycle_node\x1b[0m\n'}
+[18.349421] (-) TimerEvent: {}
+[18.449711] (-) TimerEvent: {}
+[18.550052] (-) TimerEvent: {}
+[18.650461] (-) TimerEvent: {}
+[18.750748] (-) TimerEvent: {}
+[18.851026] (-) TimerEvent: {}
+[18.951301] (-) TimerEvent: {}
+[19.051589] (-) TimerEvent: {}
+[19.151880] (-) TimerEvent: {}
+[19.252158] (-) TimerEvent: {}
+[19.334049] (only_robot_arm) StdoutLine: {'line': b'[100%] Built target pollination_cycle_node\n'}
+[19.347451] (only_robot_arm) CommandEnded: {'returncode': 0}
+[19.348182] (only_robot_arm) JobProgress: {'identifier': 'only_robot_arm', 'progress': 'install'}
+[19.352229] (-) TimerEvent: {}
+[19.357851] (only_robot_arm) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/lcy/ros2_ws/build/only_robot_arm'], 'cwd': '/home/lcy/ros2_ws/build/only_robot_arm', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'BLE_SESSION_ID': '1775969849.598799/208962', 'HTTPS_PROXY': 'http://127.0.0.1:7890/', 'no_proxy': 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1', 'LANGUAGE': 'zh_CN:en', 'USER': 'lcy', 'LC_TIME': 'C.UTF-8', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'STARSHIP_SHELL': 'bash', 'all_proxy': 'socks://127.0.0.1:7890/', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/lcy', 'CONDA_SHLVL': '0', 'OLDPWD': '/home/lcy/ros2_ws', 'DESKTOP_SESSION': 'ubuntu', 'NO_PROXY': 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SDL_IM_MODULE': 'fcitx', 'LC_MONETARY': 'C.UTF-8', 'SYSTEMD_EXEC_PID': '4054', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', '_CONDA_ROOT': '/home/lcy/miniconda3', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'https_proxy': 'http://127.0.0.1:7890/', 'COLCON_PREFIX_PATH': '/home/lcy/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'lcy', 'ALL_PROXY': 'socks://127.0.0.1:7890/', 'http_proxy': 'http://127.0.0.1:7890/', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'lcy', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/home/lcy/miniconda3/condabin:/home/lcy/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/lcy:@/tmp/.ICE-unix/3915,unix/lcy:/tmp/.ICE-unix/3915', '_ble_util_fdlist_cloexec': '', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'C.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/88e75c22_2b2e_4e35_ac12_ea619804054e', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'C.UTF-8', 'XMODIFIERS': '@im=fcitx', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.193', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/lcy/ros2_ws/install/only_robot_arm_moveit_config:/home/lcy/ros2_ws/install/only_robot_arm:/home/lcy/ros2_ws/install/environment:/opt/ros/jazzy', 'CONDA_PYTHON_EXE': '/home/lcy/miniconda3/bin/python', 'SHELL': '/bin/bash', 'LC_NAME': 'C.UTF-8', 'QT_ACCESSIBILITY': '1', 'ROS_MASTER_URI': 'http://127.0.0.1:11311', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'C.UTF-8', 'LINENO': '19', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', '_CONDA_EXE': '/home/lcy/miniconda3/bin/conda', 'LC_IDENTIFICATION': 'C.UTF-8', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'bleopt_connect_tty': '1', 'QT_IM_MODULE': 'fcitx', 'MINERU_API_TOKEN': 'eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFM1MTIifQ.eyJqdGkiOiI5MTYwMDIyNyIsInJvbCI6IlJPTEVfUkVHSVNURVIiLCJpc3MiOiJPcGVuWExhYiIsImlhdCI6MTc3MjY5NDA0MSwiY2xpZW50SWQiOiJsa3pkeDU3bnZ5MjJqa3BxOXgydyIsInBob25lIjoiIiwib3BlbklkIjpudWxsLCJ1dWlkIjoiOWVkY2ZhNjAtYjQ4MC00ZWRlLWJkMzUtMmM0MjhkZTEwOWY5IiwiZW1haWwiOiIiLCJleHAiOjE3ODA0NzAwNDF9.1MJitT-bhwskcLLZpzGXUH0Zr-s7r9xSxn4imD-6x7vE1EOfjEvh1QnuCsvt1pm20z09HKoP2GhViNp6gW-xiA', 'PWD': '/home/lcy/ros2_ws/build/only_robot_arm', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CONDA_EXE': '/home/lcy/miniconda3/bin/conda', 'CLUTTER_IM_MODULE': 'xim', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/home/lcy/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', '_ble_util_fdvars_export': '', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'STARSHIP_SESSION_KEY': '2031273853573396', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'HTTP_PROXY': 'http://127.0.0.1:7890/', 'ROS_HOSTNAME': '127.0.0.1', 'LC_NUMERIC': 'C.UTF-8', 'LC_PAPER': 'C.UTF-8', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/lcy/ros2_ws/install/only_robot_arm_moveit_config:/home/lcy/ros2_ws/install/only_robot_arm:/home/lcy/ros2_ws/install/environment:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[19.365921] (only_robot_arm) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[19.366256] (only_robot_arm) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[19.366603] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/launch/display.launch\n'}
+[19.366724] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/launch/display_jazzy.launch.py\n'}
+[19.366846] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/launch/gazebo.launch\n'}
+[19.366962] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/urdf/only_robot_arm.csv\n'}
+[19.367045] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/urdf/only_robot_arm.urdf\n'}
+[19.367273] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/base_link.STL\n'}
+[19.367354] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/camera_link.STL\n'}
+[19.367452] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/environment/README.md\n'}
+[19.367533] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_1.STL\n'}
+[19.367611] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_2.STL\n'}
+[19.367688] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_3.STL\n'}
+[19.367766] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_4.STL\n'}
+[19.367854] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_5.STL\n'}
+[19.367966] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/link_6.STL\n'}
+[19.368049] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/meshes/pollination_tip_link.STL\n'}
+[19.368186] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/config/environment_visual.yaml\n'}
+[19.368269] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/config/joint_names_only_robot_arm.yaml\n'}
+[19.368358] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/config/only_robot_arm.rviz\n'}
+[19.368510] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/lib/only_robot_arm/watermelon_flower_marker.py\n'}
+[19.368644] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/lib/only_robot_arm/environment_visual_marker.py\n'}
+[19.368785] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/lib/only_robot_arm/pollination_cycle_node\n'}
+[19.368928] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/ament_index/resource_index/package_run_dependencies/only_robot_arm\n'}
+[19.369057] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/ament_index/resource_index/parent_prefix_path/only_robot_arm\n'}
+[19.369179] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/environment/ament_prefix_path.sh\n'}
+[19.369297] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/environment/ament_prefix_path.dsv\n'}
+[19.369423] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/environment/path.sh\n'}
+[19.369537] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/environment/path.dsv\n'}
+[19.369648] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/local_setup.bash\n'}
+[19.369777] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/local_setup.sh\n'}
+[19.369895] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/local_setup.zsh\n'}
+[19.369985] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/local_setup.dsv\n'}
+[19.370066] (only_robot_arm) StdoutLine: {'line': b'-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/package.dsv\n'}
+[19.379188] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/ament_index/resource_index/packages/only_robot_arm\n'}
+[19.379399] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/cmake/only_robot_armConfig.cmake\n'}
+[19.379526] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/cmake/only_robot_armConfig-version.cmake\n'}
+[19.379674] (only_robot_arm) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm/share/only_robot_arm/package.xml\n'}
+[19.381572] (only_robot_arm) CommandEnded: {'returncode': 0}
+[19.393907] (only_robot_arm) JobEnded: {'identifier': 'only_robot_arm', 'rc': 0}
+[19.394740] (only_robot_arm_moveit_config) JobStarted: {'identifier': 'only_robot_arm_moveit_config'}
+[19.401161] (only_robot_arm_moveit_config) JobProgress: {'identifier': 'only_robot_arm_moveit_config', 'progress': 'cmake'}
+[19.401599] (only_robot_arm_moveit_config) JobProgress: {'identifier': 'only_robot_arm_moveit_config', 'progress': 'build'}
+[19.401750] (only_robot_arm_moveit_config) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/lcy/ros2_ws/build/only_robot_arm_moveit_config', '--', '-j16', '-l16'], 'cwd': '/home/lcy/ros2_ws/build/only_robot_arm_moveit_config', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'BLE_SESSION_ID': '1775969849.598799/208962', 'HTTPS_PROXY': 'http://127.0.0.1:7890/', 'no_proxy': 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1', 'LANGUAGE': 'zh_CN:en', 'USER': 'lcy', 'LC_TIME': 'C.UTF-8', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'STARSHIP_SHELL': 'bash', 'all_proxy': 'socks://127.0.0.1:7890/', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/lcy', 'CONDA_SHLVL': '0', 'OLDPWD': '/home/lcy/ros2_ws', 'DESKTOP_SESSION': 'ubuntu', 'NO_PROXY': 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SDL_IM_MODULE': 'fcitx', 'LC_MONETARY': 'C.UTF-8', 'SYSTEMD_EXEC_PID': '4054', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', '_CONDA_ROOT': '/home/lcy/miniconda3', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'https_proxy': 'http://127.0.0.1:7890/', 'COLCON_PREFIX_PATH': '/home/lcy/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'lcy', 'ALL_PROXY': 'socks://127.0.0.1:7890/', 'http_proxy': 'http://127.0.0.1:7890/', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'lcy', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/home/lcy/miniconda3/condabin:/home/lcy/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/lcy:@/tmp/.ICE-unix/3915,unix/lcy:/tmp/.ICE-unix/3915', '_ble_util_fdlist_cloexec': '', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'C.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/88e75c22_2b2e_4e35_ac12_ea619804054e', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'C.UTF-8', 'XMODIFIERS': '@im=fcitx', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.193', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/lcy/ros2_ws/install/only_robot_arm_moveit_config:/home/lcy/ros2_ws/install/only_robot_arm:/home/lcy/ros2_ws/install/environment:/opt/ros/jazzy', 'CONDA_PYTHON_EXE': '/home/lcy/miniconda3/bin/python', 'SHELL': '/bin/bash', 'LC_NAME': 'C.UTF-8', 'QT_ACCESSIBILITY': '1', 'ROS_MASTER_URI': 'http://127.0.0.1:11311', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'C.UTF-8', 'LINENO': '19', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', '_CONDA_EXE': '/home/lcy/miniconda3/bin/conda', 'LC_IDENTIFICATION': 'C.UTF-8', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'bleopt_connect_tty': '1', 'QT_IM_MODULE': 'fcitx', 'MINERU_API_TOKEN': 'eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFM1MTIifQ.eyJqdGkiOiI5MTYwMDIyNyIsInJvbCI6IlJPTEVfUkVHSVNURVIiLCJpc3MiOiJPcGVuWExhYiIsImlhdCI6MTc3MjY5NDA0MSwiY2xpZW50SWQiOiJsa3pkeDU3bnZ5MjJqa3BxOXgydyIsInBob25lIjoiIiwib3BlbklkIjpudWxsLCJ1dWlkIjoiOWVkY2ZhNjAtYjQ4MC00ZWRlLWJkMzUtMmM0MjhkZTEwOWY5IiwiZW1haWwiOiIiLCJleHAiOjE3ODA0NzAwNDF9.1MJitT-bhwskcLLZpzGXUH0Zr-s7r9xSxn4imD-6x7vE1EOfjEvh1QnuCsvt1pm20z09HKoP2GhViNp6gW-xiA', 'PWD': '/home/lcy/ros2_ws/build/only_robot_arm_moveit_config', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CONDA_EXE': '/home/lcy/miniconda3/bin/conda', 'CLUTTER_IM_MODULE': 'xim', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/home/lcy/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', '_ble_util_fdvars_export': '', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'STARSHIP_SESSION_KEY': '2031273853573396', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'HTTP_PROXY': 'http://127.0.0.1:7890/', 'ROS_HOSTNAME': '127.0.0.1', 'LC_NUMERIC': 'C.UTF-8', 'LC_PAPER': 'C.UTF-8', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/lcy/ros2_ws/install/only_robot_arm:/home/lcy/ros2_ws/install/only_robot_arm_moveit_config:/home/lcy/ros2_ws/install/environment:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[19.441583] (only_robot_arm_moveit_config) CommandEnded: {'returncode': 0}
+[19.442229] (only_robot_arm_moveit_config) JobProgress: {'identifier': 'only_robot_arm_moveit_config', 'progress': 'install'}
+[19.442667] (only_robot_arm_moveit_config) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/lcy/ros2_ws/build/only_robot_arm_moveit_config'], 'cwd': '/home/lcy/ros2_ws/build/only_robot_arm_moveit_config', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'BLE_SESSION_ID': '1775969849.598799/208962', 'HTTPS_PROXY': 'http://127.0.0.1:7890/', 'no_proxy': 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1', 'LANGUAGE': 'zh_CN:en', 'USER': 'lcy', 'LC_TIME': 'C.UTF-8', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'STARSHIP_SHELL': 'bash', 'all_proxy': 'socks://127.0.0.1:7890/', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/lcy', 'CONDA_SHLVL': '0', 'OLDPWD': '/home/lcy/ros2_ws', 'DESKTOP_SESSION': 'ubuntu', 'NO_PROXY': 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SDL_IM_MODULE': 'fcitx', 'LC_MONETARY': 'C.UTF-8', 'SYSTEMD_EXEC_PID': '4054', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', '_CONDA_ROOT': '/home/lcy/miniconda3', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'https_proxy': 'http://127.0.0.1:7890/', 'COLCON_PREFIX_PATH': '/home/lcy/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'lcy', 'ALL_PROXY': 'socks://127.0.0.1:7890/', 'http_proxy': 'http://127.0.0.1:7890/', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'lcy', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/home/lcy/miniconda3/condabin:/home/lcy/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/lcy:@/tmp/.ICE-unix/3915,unix/lcy:/tmp/.ICE-unix/3915', '_ble_util_fdlist_cloexec': '', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'C.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/88e75c22_2b2e_4e35_ac12_ea619804054e', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'C.UTF-8', 'XMODIFIERS': '@im=fcitx', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.193', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/lcy/ros2_ws/install/only_robot_arm_moveit_config:/home/lcy/ros2_ws/install/only_robot_arm:/home/lcy/ros2_ws/install/environment:/opt/ros/jazzy', 'CONDA_PYTHON_EXE': '/home/lcy/miniconda3/bin/python', 'SHELL': '/bin/bash', 'LC_NAME': 'C.UTF-8', 'QT_ACCESSIBILITY': '1', 'ROS_MASTER_URI': 'http://127.0.0.1:11311', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'C.UTF-8', 'LINENO': '19', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', '_CONDA_EXE': '/home/lcy/miniconda3/bin/conda', 'LC_IDENTIFICATION': 'C.UTF-8', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'bleopt_connect_tty': '1', 'QT_IM_MODULE': 'fcitx', 'MINERU_API_TOKEN': 'eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFM1MTIifQ.eyJqdGkiOiI5MTYwMDIyNyIsInJvbCI6IlJPTEVfUkVHSVNURVIiLCJpc3MiOiJPcGVuWExhYiIsImlhdCI6MTc3MjY5NDA0MSwiY2xpZW50SWQiOiJsa3pkeDU3bnZ5MjJqa3BxOXgydyIsInBob25lIjoiIiwib3BlbklkIjpudWxsLCJ1dWlkIjoiOWVkY2ZhNjAtYjQ4MC00ZWRlLWJkMzUtMmM0MjhkZTEwOWY5IiwiZW1haWwiOiIiLCJleHAiOjE3ODA0NzAwNDF9.1MJitT-bhwskcLLZpzGXUH0Zr-s7r9xSxn4imD-6x7vE1EOfjEvh1QnuCsvt1pm20z09HKoP2GhViNp6gW-xiA', 'PWD': '/home/lcy/ros2_ws/build/only_robot_arm_moveit_config', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CONDA_EXE': '/home/lcy/miniconda3/bin/conda', 'CLUTTER_IM_MODULE': 'xim', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/home/lcy/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', '_ble_util_fdvars_export': '', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'STARSHIP_SESSION_KEY': '2031273853573396', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'HTTP_PROXY': 'http://127.0.0.1:7890/', 'ROS_HOSTNAME': '127.0.0.1', 'LC_NUMERIC': 'C.UTF-8', 'LC_PAPER': 'C.UTF-8', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/lcy/ros2_ws/install/only_robot_arm:/home/lcy/ros2_ws/install/only_robot_arm_moveit_config:/home/lcy/ros2_ws/install/environment:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[19.450078] (only_robot_arm_moveit_config) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[19.450433] (only_robot_arm_moveit_config) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[19.450952] (only_robot_arm_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_moveit_config/share/only_robot_arm_moveit_config/config/initial_positions.yaml\n'}
+[19.451043] (only_robot_arm_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_moveit_config/share/only_robot_arm_moveit_config/config/joint_limits.yaml\n'}
+[19.451131] (only_robot_arm_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_moveit_config/share/only_robot_arm_moveit_config/config/kinematics.yaml\n'}
+[19.451217] (only_robot_arm_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_moveit_config/share/only_robot_arm_moveit_config/config/moveit_controllers.yaml\n'}
+[19.451304] (only_robot_arm_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_moveit_config/share/only_robot_arm_moveit_config/config/ompl_planning.yaml\n'}
+[19.451399] (only_robot_arm_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_moveit_config/share/only_robot_arm_moveit_config/config/only_robot_arm.srdf\n'}
+[19.451640] (only_robot_arm_moveit_config) StdoutLine: {'line': b'-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm_moveit_config/share/only_robot_arm_moveit_config/launch/__pycache__/demo.launch.cpython-312.pyc\n'}
+[19.452287] (-) TimerEvent: {}
+[19.461265] (only_robot_arm_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_moveit_config/share/only_robot_arm_moveit_config/launch/demo.launch.py\n'}
+[19.461498] (only_robot_arm_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_moveit_config/share/only_robot_arm_moveit_config/launch/moveit.rviz\n'}
+[19.461624] (only_robot_arm_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_moveit_config/share/ament_index/resource_index/package_run_dependencies/only_robot_arm_moveit_config\n'}
+[19.461748] (only_robot_arm_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_moveit_config/share/ament_index/resource_index/parent_prefix_path/only_robot_arm_moveit_config\n'}
+[19.461865] (only_robot_arm_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_moveit_config/share/only_robot_arm_moveit_config/environment/ament_prefix_path.sh\n'}
+[19.461997] (only_robot_arm_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_moveit_config/share/only_robot_arm_moveit_config/environment/ament_prefix_path.dsv\n'}
+[19.462119] (only_robot_arm_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_moveit_config/share/only_robot_arm_moveit_config/environment/path.sh\n'}
+[19.462267] (only_robot_arm_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_moveit_config/share/only_robot_arm_moveit_config/environment/path.dsv\n'}
+[19.462401] (only_robot_arm_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_moveit_config/share/only_robot_arm_moveit_config/local_setup.bash\n'}
+[19.462555] (only_robot_arm_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_moveit_config/share/only_robot_arm_moveit_config/local_setup.sh\n'}
+[19.462729] (only_robot_arm_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_moveit_config/share/only_robot_arm_moveit_config/local_setup.zsh\n'}
+[19.462891] (only_robot_arm_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_moveit_config/share/only_robot_arm_moveit_config/local_setup.dsv\n'}
+[19.463001] (only_robot_arm_moveit_config) StdoutLine: {'line': b'-- Symlinking: /home/lcy/ros2_ws/install/only_robot_arm_moveit_config/share/only_robot_arm_moveit_config/package.dsv\n'}
+[19.472656] (only_robot_arm_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_moveit_config/share/ament_index/resource_index/packages/only_robot_arm_moveit_config\n'}
+[19.472849] (only_robot_arm_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_moveit_config/share/only_robot_arm_moveit_config/cmake/only_robot_arm_moveit_configConfig.cmake\n'}
+[19.472984] (only_robot_arm_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_moveit_config/share/only_robot_arm_moveit_config/cmake/only_robot_arm_moveit_configConfig-version.cmake\n'}
+[19.473225] (only_robot_arm_moveit_config) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lcy/ros2_ws/install/only_robot_arm_moveit_config/share/only_robot_arm_moveit_config/package.xml\n'}
+[19.476075] (only_robot_arm_moveit_config) CommandEnded: {'returncode': 0}
+[19.486257] (only_robot_arm_moveit_config) JobEnded: {'identifier': 'only_robot_arm_moveit_config', 'rc': 0}
+[19.486992] (-) EventReactorShutdown: {}

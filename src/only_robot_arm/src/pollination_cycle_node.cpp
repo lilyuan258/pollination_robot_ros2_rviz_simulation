@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <array>
 #include <atomic>
 #include <chrono>
 #include <cmath>
@@ -21,6 +22,7 @@
 #include <geometry_msgs/msg/transform_stamped.hpp>
 #include <moveit/move_group_interface/move_group_interface.hpp>
 #include <moveit/robot_state/conversions.hpp>
+#include <moveit_msgs/msg/display_trajectory.hpp>
 #include <moveit_msgs/msg/move_it_error_codes.hpp>
 #include <moveit_msgs/srv/get_position_ik.hpp>
 #include <rclcpp/rclcpp.hpp>
@@ -28,6 +30,8 @@
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 #include <tf2_ros/buffer.h>
 #include <tf2_ros/transform_listener.h>
+#include <visualization_msgs/msg/marker.hpp>
+#include <visualization_msgs/msg/marker_array.hpp>
 
 namespace
 {
@@ -64,6 +68,18 @@ geometry_msgs::msg::Quaternion toMsg(const Eigen::Quaterniond & q_in)
   msg.w = q.w();
   return msg;
 }
+
+geometry_msgs::msg::Pose toPoseMsg(const Eigen::Isometry3d & transform)
+{
+  geometry_msgs::msg::Pose pose;
+  const Eigen::Vector3d translation = transform.translation();
+  const Eigen::Quaterniond rotation(transform.rotation());
+  pose.position.x = translation.x();
+  pose.position.y = translation.y();
+  pose.position.z = translation.z();
+  pose.orientation = toMsg(rotation);
+  return pose;
+}
 }  // namespace
 
 class PollinationCycleNode : public rclcpp::Node
@@ -78,6 +94,8 @@ public:
     axis_tip_initialized_(false)
   {
     world_frame_ = this->declare_parameter<std::string>("world_frame", "world");
+    base_frame_ = this->declare_parameter<std::string>("base_frame", "base_link");
+    virtual_joint_name_ = this->declare_parameter<std::string>("virtual_joint_name", "world_joint");
     anchor_frame_ = this->declare_parameter<std::string>("anchor_frame", "link_1");
     tip_frame_ = this->declare_parameter<std::string>("tip_frame", "pollination_tip_link");
     joint6_frame_ = this->declare_parameter<std::string>("joint6_frame", "link_6");
@@ -93,6 +111,8 @@ public:
     loop_pause_sec_ = this->declare_parameter<double>("loop_pause_sec", 0.6);
     base_clockwise_delta_rad_ =
       this->declare_parameter<double>("base_clockwise_delta_rad", M_PI / 2.0);
+    single_cycle_snapshot_mode_ =
+      this->declare_parameter<bool>("single_cycle_snapshot_mode", true);
 
     planning_time_sec_ = this->declare_parameter<double>("planning_time_sec", 5.0);
     goal_position_tolerance_m_ = this->declare_parameter<double>("goal_position_tolerance_m", 0.003);
@@ -118,6 +138,19 @@ public:
 
     joint_state_pub_ = this->create_publisher<sensor_msgs::msg::JointState>(
       "/joint_states", rclcpp::QoS(100));
+
+    auto snapshot_qos = rclcpp::QoS(rclcpp::KeepLast(1));
+    snapshot_qos.transient_local().reliable();
+    snapshot_start_pub_ = this->create_publisher<moveit_msgs::msg::DisplayTrajectory>(
+      "/pollination_snapshots/start", snapshot_qos);
+    snapshot_base_90_pub_ = this->create_publisher<moveit_msgs::msg::DisplayTrajectory>(
+      "/pollination_snapshots/base_90", snapshot_qos);
+    snapshot_pre_pollination_pub_ = this->create_publisher<moveit_msgs::msg::DisplayTrajectory>(
+      "/pollination_snapshots/pre_pollination", snapshot_qos);
+    snapshot_pollination_pub_ = this->create_publisher<moveit_msgs::msg::DisplayTrajectory>(
+      "/pollination_snapshots/pollination", snapshot_qos);
+    snapshot_marker_pub_ = this->create_publisher<visualization_msgs::msg::MarkerArray>(
+      "/pollination_snapshot_markers", snapshot_qos);
 
     joint_state_timer_ = this->create_wall_timer(
       50ms, std::bind(&PollinationCycleNode::publishJointStateHeartbeat, this));
@@ -742,6 +775,251 @@ private:
     state.update();
   }
 
+  std::map<std::string, double> mergedSnapshotJointMap(
+    const std::map<std::string, double> & joint_map) const
+  {
+    auto merged = contracted_joint_target_;
+    for (const auto & [name, value] : joint_map) {
+      merged[name] = value;
+    }
+    return merged;
+  }
+
+  bool addRootTransformToRobotStateMsg(moveit_msgs::msg::RobotState & robot_state_msg)
+  {
+    const auto tf_world_base = lookupTransform(world_frame_, base_frame_);
+    if (!tf_world_base) {
+      RCLCPP_WARN(
+        this->get_logger(),
+        "Cannot publish snapshots without root transform (%s <- %s).",
+        world_frame_.c_str(), base_frame_.c_str());
+      return false;
+    }
+
+    auto & multi_dof = robot_state_msg.multi_dof_joint_state;
+    multi_dof.header.stamp = this->now();
+    multi_dof.header.frame_id = world_frame_;
+
+    const auto joint_it = std::find(
+      multi_dof.joint_names.begin(), multi_dof.joint_names.end(), virtual_joint_name_);
+    if (joint_it == multi_dof.joint_names.end()) {
+      multi_dof.joint_names.push_back(virtual_joint_name_);
+      multi_dof.transforms.push_back(tf_world_base->transform);
+      return true;
+    }
+
+    const auto index = static_cast<size_t>(
+      std::distance(multi_dof.joint_names.begin(), joint_it));
+    if (multi_dof.transforms.size() <= index) {
+      multi_dof.transforms.resize(index + 1);
+    }
+    multi_dof.transforms[index] = tf_world_base->transform;
+    return true;
+  }
+
+  std::optional<moveit_msgs::msg::DisplayTrajectory> makeSnapshotTrajectory(
+    const std::map<std::string, double> & joint_map,
+    const std::string & label)
+  {
+    if (!move_group_) {
+      RCLCPP_WARN(
+        this->get_logger(),
+        "Cannot publish snapshot '%s' before MoveGroupInterface is ready.",
+        label.c_str());
+      return std::nullopt;
+    }
+    if (arm_joint_names_.empty()) {
+      RCLCPP_WARN(this->get_logger(), "Cannot publish snapshot '%s' with no arm joints.", label.c_str());
+      return std::nullopt;
+    }
+
+    const auto merged_joint_map = mergedSnapshotJointMap(joint_map);
+    std::vector<double> positions;
+    positions.reserve(arm_joint_names_.size());
+    for (const auto & joint_name : arm_joint_names_) {
+      const auto it = merged_joint_map.find(joint_name);
+      if (it == merged_joint_map.end()) {
+        RCLCPP_WARN(
+          this->get_logger(),
+          "Cannot publish snapshot '%s': missing joint '%s'.",
+          label.c_str(), joint_name.c_str());
+        return std::nullopt;
+      }
+      positions.push_back(it->second);
+    }
+
+    moveit::core::RobotState snapshot_state(move_group_->getRobotModel());
+    snapshot_state.setToDefaultValues();
+    applyJointMapToRobotState(merged_joint_map, snapshot_state);
+
+    moveit_msgs::msg::DisplayTrajectory msg;
+    msg.model_id = move_group_->getRobotModel()->getName();
+    moveit::core::robotStateToRobotStateMsg(snapshot_state, msg.trajectory_start);
+    if (!addRootTransformToRobotStateMsg(msg.trajectory_start)) {
+      return std::nullopt;
+    }
+
+    auto & trajectory = msg.trajectory.emplace_back();
+    trajectory.joint_trajectory.header.stamp = this->now();
+    trajectory.joint_trajectory.header.frame_id = world_frame_;
+    trajectory.joint_trajectory.joint_names = arm_joint_names_;
+
+    auto & point = trajectory.joint_trajectory.points.emplace_back();
+    point.positions = positions;
+    point.time_from_start.nanosec = 100000000;
+
+    return msg;
+  }
+
+  void publishSnapshotTrajectory(
+    const rclcpp::Publisher<moveit_msgs::msg::DisplayTrajectory>::SharedPtr & publisher,
+    const std::map<std::string, double> & joint_map,
+    const std::string & label)
+  {
+    const auto msg = makeSnapshotTrajectory(joint_map, label);
+    if (!msg) {
+      return;
+    }
+
+    publisher->publish(*msg);
+    RCLCPP_INFO(this->get_logger(), "Published snapshot trajectory: %s.", label.c_str());
+  }
+
+  std::optional<Eigen::Isometry3d> lookupWorldToBaseTransform(const std::string & label)
+  {
+    const auto tf_world_base = lookupTransform(world_frame_, base_frame_);
+    if (!tf_world_base) {
+      RCLCPP_WARN(
+        this->get_logger(),
+        "Cannot publish snapshot markers '%s' without root transform (%s <- %s).",
+        label.c_str(), world_frame_.c_str(), base_frame_.c_str());
+      return std::nullopt;
+    }
+
+    Eigen::Isometry3d world_to_base = Eigen::Isometry3d::Identity();
+    world_to_base.translation() = Eigen::Vector3d(
+      tf_world_base->transform.translation.x,
+      tf_world_base->transform.translation.y,
+      tf_world_base->transform.translation.z);
+    world_to_base.linear() = toEigen(tf_world_base->transform.rotation).toRotationMatrix();
+    return world_to_base;
+  }
+
+  visualization_msgs::msg::Marker makeSnapshotLinkMarker(
+    const moveit::core::RobotState & snapshot_state,
+    const Eigen::Isometry3d & world_to_base,
+    const std::string & stage_name,
+    const std::string & link_name,
+    const std::string & mesh_resource,
+    const std::array<float, 4> & color,
+    const int32_t marker_id)
+  {
+    visualization_msgs::msg::Marker marker;
+    marker.header.frame_id = world_frame_;
+    marker.header.stamp = this->now();
+    marker.ns = "pollination_snapshot_" + stage_name;
+    marker.id = marker_id;
+    marker.type = visualization_msgs::msg::Marker::MESH_RESOURCE;
+    marker.action = visualization_msgs::msg::Marker::ADD;
+    marker.mesh_resource = mesh_resource;
+    marker.mesh_use_embedded_materials = false;
+    const Eigen::Isometry3d base_to_link = snapshot_state.getGlobalLinkTransform(link_name);
+    marker.pose = toPoseMsg(world_to_base * base_to_link);
+    marker.scale.x = 1.0;
+    marker.scale.y = 1.0;
+    marker.scale.z = 1.0;
+    marker.color.r = color[0];
+    marker.color.g = color[1];
+    marker.color.b = color[2];
+    marker.color.a = color[3];
+    return marker;
+  }
+
+  void appendSnapshotMarkers(
+    visualization_msgs::msg::MarkerArray & marker_array,
+    const std::map<std::string, double> & joint_map,
+    const std::string & stage_name,
+    const std::array<float, 4> & color,
+    int32_t & marker_id)
+  {
+    if (!move_group_) {
+      RCLCPP_WARN(
+        this->get_logger(),
+        "Cannot publish snapshot markers '%s' before MoveGroupInterface is ready.",
+        stage_name.c_str());
+      return;
+    }
+
+    const auto world_to_base = lookupWorldToBaseTransform(stage_name);
+    if (!world_to_base) {
+      return;
+    }
+
+    const auto merged_joint_map = mergedSnapshotJointMap(joint_map);
+    moveit::core::RobotState snapshot_state(move_group_->getRobotModel());
+    snapshot_state.setToDefaultValues();
+    applyJointMapToRobotState(merged_joint_map, snapshot_state);
+
+    const std::vector<std::pair<std::string, std::string>> link_meshes = {
+      {"base_link", "package://only_robot_arm/meshes/base_link.STL"},
+      {"link_1", "package://only_robot_arm/meshes/link_1.STL"},
+      {"link_2", "package://only_robot_arm/meshes/link_2.STL"},
+      {"link_3", "package://only_robot_arm/meshes/link_3.STL"},
+      {"link_4", "package://only_robot_arm/meshes/link_4.STL"},
+      {"link_5", "package://only_robot_arm/meshes/link_5.STL"},
+      {"link_6", "package://only_robot_arm/meshes/link_6.STL"},
+      {"camera_link", "package://only_robot_arm/meshes/camera_link.STL"},
+      {"pollination_tip_link", "package://only_robot_arm/meshes/pollination_tip_link.STL"}};
+
+    for (const auto & [link_name, mesh_resource] : link_meshes) {
+      marker_array.markers.push_back(
+        makeSnapshotLinkMarker(
+          snapshot_state, *world_to_base, stage_name, link_name, mesh_resource, color, marker_id));
+      ++marker_id;
+    }
+  }
+
+  void publishSnapshotMarkers(
+    const std::map<std::string, double> & start_snapshot,
+    const std::map<std::string, double> & base_90_snapshot,
+    const std::map<std::string, double> & pre_pollination_snapshot,
+    const std::map<std::string, double> & pollination_snapshot)
+  {
+    visualization_msgs::msg::MarkerArray delete_array;
+    visualization_msgs::msg::Marker delete_marker;
+    delete_marker.action = visualization_msgs::msg::Marker::DELETEALL;
+    delete_array.markers.push_back(delete_marker);
+    snapshot_marker_pub_->publish(delete_array);
+
+    visualization_msgs::msg::MarkerArray marker_array;
+    int32_t marker_id = 0;
+    /*appendSnapshotMarkers(marker_array, start_snapshot, "start", {0.10F, 0.55F, 1.0F, 0.42F}, marker_id);*/
+    appendSnapshotMarkers(marker_array, base_90_snapshot, "base_90", {1.0F, 0.82F, 0.15F, 0.45F}, marker_id);
+    appendSnapshotMarkers(
+      marker_array, pre_pollination_snapshot, "pre_pollination", {0.20F, 0.90F, 0.30, 0.45F}, marker_id);
+    appendSnapshotMarkers(
+      marker_array, pollination_snapshot, "pollination", {1.0F, 0.20F, 0.25F, 1.0F}, marker_id);
+
+    snapshot_marker_pub_->publish(marker_array);
+    RCLCPP_INFO(
+      this->get_logger(),
+      "Published %zu world-frame snapshot mesh markers.",
+      marker_array.markers.size());
+  }
+
+  void publishSnapshotSet(
+    const std::map<std::string, double> & start_snapshot,
+    const std::map<std::string, double> & base_90_snapshot,
+    const std::map<std::string, double> & pre_pollination_snapshot,
+    const std::map<std::string, double> & pollination_snapshot)
+  {
+    publishSnapshotTrajectory(snapshot_start_pub_, start_snapshot, "start");
+    publishSnapshotTrajectory(snapshot_base_90_pub_, base_90_snapshot, "base_90");
+    publishSnapshotTrajectory(snapshot_pre_pollination_pub_, pre_pollination_snapshot, "pre_pollination");
+    publishSnapshotTrajectory(snapshot_pollination_pub_, pollination_snapshot, "pollination");
+    publishSnapshotMarkers(start_snapshot, base_90_snapshot, pre_pollination_snapshot, pollination_snapshot);
+  }
+
   bool sleepWithStop(double seconds)
   {
     const auto total = std::chrono::duration<double>(seconds);
@@ -766,6 +1044,7 @@ private:
         sleepWithStop(0.5);
         continue;
       }
+      const auto start_snapshot = currentOrContractedJointMap();
 
       auto rotate_target = currentOrContractedJointMap();
       if (rotate_target.find("joint_1") == rotate_target.end()) {
@@ -781,6 +1060,7 @@ private:
         sleepWithStop(0.5);
         continue;
       }
+      const auto base_90_snapshot = currentOrContractedJointMap();
 
       geometry_msgs::msg::Point flower_center;
       if (!getFlowerCenter(flower_center)) {
@@ -805,6 +1085,7 @@ private:
         sleepWithStop(0.5);
         continue;
       }
+      const auto pre_pollination_snapshot = currentOrContractedJointMap();
 
       RCLCPP_INFO(this->get_logger(), "Stage 4/8: move to pollination pose (50 mm offset).");
       if (!planAndSimulateToPoseTarget(pollination_pose, "pollination_pose")) {
@@ -820,6 +1101,7 @@ private:
         }
         pollination_pose = fallback_pollination_pose;
       }
+      const auto pollination_snapshot = currentOrContractedJointMap();
 
       RCLCPP_INFO(this->get_logger(), "Stage 5/8: dwell for pollination.");
       if (!sleepWithStop(dwell_sec_)) {
@@ -842,6 +1124,15 @@ private:
       if (!sleepWithStop(loop_pause_sec_)) {
         return;
       }
+
+      if (single_cycle_snapshot_mode_) {
+        publishSnapshotSet(
+          start_snapshot, base_90_snapshot, pre_pollination_snapshot, pollination_snapshot);
+        RCLCPP_INFO(
+          this->get_logger(),
+          "Single-cycle snapshot mode finished. Holding final joint state for RViz screenshots.");
+        return;
+      }
     }
   }
 
@@ -852,6 +1143,11 @@ private:
   std::shared_ptr<moveit::planning_interface::MoveGroupInterface> move_group_;
   rclcpp::Client<moveit_msgs::srv::GetPositionIK>::SharedPtr ik_client_;
   rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr joint_state_pub_;
+  rclcpp::Publisher<moveit_msgs::msg::DisplayTrajectory>::SharedPtr snapshot_start_pub_;
+  rclcpp::Publisher<moveit_msgs::msg::DisplayTrajectory>::SharedPtr snapshot_base_90_pub_;
+  rclcpp::Publisher<moveit_msgs::msg::DisplayTrajectory>::SharedPtr snapshot_pre_pollination_pub_;
+  rclcpp::Publisher<moveit_msgs::msg::DisplayTrajectory>::SharedPtr snapshot_pollination_pub_;
+  rclcpp::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr snapshot_marker_pub_;
 
   rclcpp::TimerBase::SharedPtr joint_state_timer_;
   rclcpp::TimerBase::SharedPtr startup_timer_;
@@ -861,6 +1157,8 @@ private:
   std::atomic<bool> stop_requested_;
 
   std::string world_frame_;
+  std::string base_frame_;
+  std::string virtual_joint_name_;
   std::string anchor_frame_;
   std::string tip_frame_;
   std::string joint6_frame_;
@@ -875,6 +1173,7 @@ private:
   double dwell_sec_;
   double loop_pause_sec_;
   double base_clockwise_delta_rad_;
+  bool single_cycle_snapshot_mode_;
 
   double planning_time_sec_;
   double goal_position_tolerance_m_;

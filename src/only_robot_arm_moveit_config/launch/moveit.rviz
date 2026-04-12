@@ -4,12 +4,12 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - /Grid1
-        - /MotionPlanning1/Planned Path1
+        - /Global Options1
+        - /PlanningScene1
+        - /MotionPlanning1
         - /MarkerArray2
-        - /MarkerArray2/Namespaces1
       Splitter Ratio: 0.5
-    Tree Height: 192
+    Tree Height: 313
   - Class: rviz_common/Selection
     Name: Selection
   - Class: rviz_common/Tool Properties
@@ -32,7 +32,7 @@ Visualization Manager:
       Cell Size: 1
       Class: rviz_default_plugins/Grid
       Color: 160; 160; 164
-      Enabled: true
+      Enabled: false
       Line Style:
         Line Width: 0.029999999329447746
         Value: Lines
@@ -45,7 +45,7 @@ Visualization Manager:
       Plane: XY
       Plane Cell Count: 10
       Reference Frame: <Fixed Frame>
-      Value: true
+      Value: false
     - Class: rviz_default_plugins/MarkerArray
       Enabled: true
       Name: MarkerArray
@@ -125,6 +125,110 @@ Visualization Manager:
       Trail Step Size: 1
       Trajectory Topic: /display_planned_path
       Use Sim Time: false
+      Value: true
+    - Class: moveit_rviz_plugin/Trajectory
+      Color Enabled: true
+      Enabled: false
+      Interrupt Display: false
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+      Loop Animation: false
+      Name: Snapshot - Start
+      Robot Alpha: 0.44999998807907104
+      Robot Color: 80; 180; 255
+      Robot Description: robot_description
+      Show Robot Collision: true
+      Show Robot Visual: true
+      Show Trail: true
+      State Display Time: 0.05 s
+      Trail Step Size: 1
+      Trajectory Topic: /pollination_snapshots/start
+      Use Sim Time: false
+      Value: false
+    - Class: moveit_rviz_plugin/Trajectory
+      Color Enabled: true
+      Enabled: false
+      Interrupt Display: false
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+      Loop Animation: false
+      Name: Snapshot - Base 90
+      Robot Alpha: 0.5
+      Robot Color: 105; 210; 120
+      Robot Description: robot_description
+      Show Robot Collision: false
+      Show Robot Visual: true
+      Show Trail: true
+      State Display Time: 0.05 s
+      Trail Step Size: 1
+      Trajectory Topic: /pollination_snapshots/base_90
+      Use Sim Time: false
+      Value: false
+    - Class: moveit_rviz_plugin/Trajectory
+      Color Enabled: true
+      Enabled: false
+      Interrupt Display: false
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+      Loop Animation: false
+      Name: Snapshot - Pre Pollination
+      Robot Alpha: 0.550000011920929
+      Robot Color: 245; 205; 75
+      Robot Description: robot_description
+      Show Robot Collision: false
+      Show Robot Visual: true
+      Show Trail: true
+      State Display Time: 0.05 s
+      Trail Step Size: 1
+      Trajectory Topic: /pollination_snapshots/pre_pollination
+      Use Sim Time: false
+      Value: false
+    - Class: moveit_rviz_plugin/Trajectory
+      Color Enabled: true
+      Enabled: false
+      Interrupt Display: false
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+      Loop Animation: false
+      Name: Snapshot - Pollination
+      Robot Alpha: 0.6499999761581421
+      Robot Color: 255; 115; 120
+      Robot Description: robot_description
+      Show Robot Collision: false
+      Show Robot Visual: true
+      Show Trail: true
+      State Display Time: 0.05 s
+      Trail Step Size: 1
+      Trajectory Topic: /pollination_snapshots/pollination
+      Use Sim Time: false
+      Value: false
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: Pollination Snapshot Markers
+      Namespaces:
+        {}
+      Topic:
+        Depth: 1
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /pollination_snapshot_markers
       Value: true
     - Class: moveit_rviz_plugin/PlanningScene
       Enabled: true
@@ -365,7 +469,7 @@ Visualization Manager:
             Value: true
         Robot Alpha: 1
         Show Robot Collision: false
-        Show Robot Visual: true
+        Show Robot Visual: false
       Value: true
       Velocity_Scaling_Factor: 0.1
     - Class: rviz_default_plugins/Axes
@@ -387,9 +491,56 @@ Visualization Manager:
         Reliability Policy: Reliable
         Value: /environment_visual
       Value: true
+    - Class: rviz_default_plugins/TF
+      Enabled: true
+      Filter (blacklist): ""
+      Filter (whitelist): ""
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+        base_link:
+          Value: true
+        camera_link:
+          Value: true
+        link_1:
+          Value: true
+        link_2:
+          Value: true
+        link_3:
+          Value: true
+        link_4:
+          Value: true
+        link_5:
+          Value: true
+        link_6:
+          Value: true
+        pollination_tip_link:
+          Value: true
+        world:
+          Value: true
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: false
+      Tree:
+        world:
+          base_link:
+            link_1:
+              link_2:
+                link_3:
+                  link_4:
+                    link_5:
+                      camera_link:
+                        {}
+                      link_6:
+                        pollination_tip_link:
+                          {}
+      Update Interval: 0
+      Value: true
   Enabled: true
   Global Options:
-    Background Color: 48; 48; 48
+    Background Color: 255; 255; 255
     Fixed Frame: world
     Frame Rate: 30
   Name: root
@@ -433,25 +584,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 5.758814334869385
+      Distance: 4.733443260192871
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.5016481280326843
-        Y: -0.3794983923435211
-        Z: 0.3488506078720093
+        X: 0.33685287833213806
+        Y: -0.2188032567501068
+        Z: 0.42477142810821533
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.42979729175567627
+      Pitch: 0.34979748725891113
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.438577651977539
+      Yaw: 3.928596019744873
     Saved: ~
 Window Geometry:
   Displays:
@@ -463,10 +614,18 @@ Window Geometry:
     collapsed: false
   MotionPlanning - Trajectory Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000400000000000001f300000395fc020000000dfb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005d00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003f00000100000000cc00fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670100000145000001fe0000019600fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000003c005400720061006a006500630074006f007200790020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000004400fffffffb000000280020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000004400fffffffb00000024005200760069007a00560069007300750061006c0054006f006f006c007300470075006901000003490000008b0000006f00ffffff000000010000010f000003abfc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003b000003ab000000a900fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004420000003efc0100000002fb0000000800540069006d00650100000000000004420000000000000000fb0000000800540069006d00650100000000000004500000000000000000000005870000039500000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000400000000000001f300000395fc0200000011fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005d00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003f00000179000000cc00fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e006701000001be000001a10000019600fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000003c005400720061006a006500630074006f007200790020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000004400fffffffb000000280020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000004400fffffffb00000024005200760069007a00560069007300750061006c0054006f006f006c007300470075006901000003650000006f0000006f00fffffffb000000480053006e0061007000730068006f00740020002d0020005300740061007200740020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000004400fffffffb0000004c0053006e0061007000730068006f00740020002d002000420061007300650020003900300020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000004400fffffffb000000540053006e0061007000730068006f00740020002d00200050006f006c006c0069006e006100740069006f006e0020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000004400fffffffb0000005c0053006e0061007000730068006f00740020002d002000500072006500200050006f006c006c0069006e006100740069006f006e0020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000004400ffffff000000010000010f000003abfc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003b000003ab000000a900fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004420000003efc0100000002fb0000000800540069006d00650100000000000004420000000000000000fb0000000800540069006d00650100000000000004500000000000000000000005870000039500000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   RvizVisualToolsGui:
     collapsed: false
   Selection:
+    collapsed: false
+  Snapshot - Base 90 - Trajectory Slider:
+    collapsed: false
+  Snapshot - Pollination - Trajectory Slider:
+    collapsed: false
+  Snapshot - Pre Pollination - Trajectory Slider:
+    collapsed: false
+  Snapshot - Start - Trajectory Slider:
     collapsed: false
   Tool Properties:
     collapsed: false

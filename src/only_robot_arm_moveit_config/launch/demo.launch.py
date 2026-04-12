@@ -75,6 +75,7 @@ def generate_launch_description():
 
     use_rviz_arg = DeclareLaunchArgument("use_rviz", default_value="true")
     run_cycle_arg = DeclareLaunchArgument("run_cycle", default_value="true")
+    single_cycle_snapshot_mode_arg = DeclareLaunchArgument("single_cycle_snapshot_mode", default_value="true")
     dx_world_arg = DeclareLaunchArgument("dx_world", default_value="0.1")
     dy_world_arg = DeclareLaunchArgument("dy_world", default_value="-0.8")
     flower_z_arg = DeclareLaunchArgument("flower_center_z", default_value="0.1")
@@ -169,6 +170,8 @@ def generate_launch_description():
         parameters=[
             {
                 "world_frame": "world",
+                "base_frame": "base_link",
+                "virtual_joint_name": "world_joint",
                 "anchor_frame": "link_1",
                 "tip_frame": "pollination_tip_link",
                 "joint6_frame": "link_6",
@@ -178,6 +181,9 @@ def generate_launch_description():
                 "flower_center_z": ParameterValue(LaunchConfiguration("flower_center_z"), value_type=float),
                 "base_clockwise_delta_rad": ParameterValue(
                     LaunchConfiguration("base_clockwise_delta_rad"), value_type=float
+                ),
+                "single_cycle_snapshot_mode": ParameterValue(
+                    LaunchConfiguration("single_cycle_snapshot_mode"), value_type=bool
                 ),
                 "contracted_joint_names": contracted_joint_names,
                 "contracted_joint_values": contracted_joint_values,
@@ -190,6 +196,7 @@ def generate_launch_description():
         [
             use_rviz_arg,
             run_cycle_arg,
+            single_cycle_snapshot_mode_arg,
             dx_world_arg,
             dy_world_arg,
             flower_z_arg,

@@ -9,6 +9,7 @@ find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 find_package(tf2_ros REQUIRED)
+find_package(visualization_msgs REQUIRED)
 
 add_executable(pollination_cycle_node src/pollination_cycle_node.cpp)
 ament_target_dependencies(
@@ -20,6 +21,7 @@ ament_target_dependencies(
   sensor_msgs
   tf2_geometry_msgs
   tf2_ros
+  visualization_msgs
 )
 
 install(
