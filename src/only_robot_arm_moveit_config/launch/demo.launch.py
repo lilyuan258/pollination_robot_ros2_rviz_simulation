@@ -75,7 +75,7 @@ def generate_launch_description():
 
     use_rviz_arg = DeclareLaunchArgument("use_rviz", default_value="true")
     run_cycle_arg = DeclareLaunchArgument("run_cycle", default_value="true")
-    single_cycle_snapshot_mode_arg = DeclareLaunchArgument("single_cycle_snapshot_mode", default_value="true")
+    single_cycle_snapshot_mode_arg = DeclareLaunchArgument("single_cycle_snapshot_mode", default_value="false")
     dx_world_arg = DeclareLaunchArgument("dx_world", default_value="0.1")
     dy_world_arg = DeclareLaunchArgument("dy_world", default_value="-0.8")
     flower_z_arg = DeclareLaunchArgument("flower_center_z", default_value="0.1")
